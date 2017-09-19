@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Password
+namespace Password.SignUp
 {
-    public partial class PasswordMunes : Form
+    public partial class SignUpPassWord : Form
     {
-        public PasswordMunes()
+        public SignUpPassWord()
         {
             InitializeComponent();
         }
-
-       
     }
 }

@@ -10,19 +10,21 @@ namespace Password
             InitializeComponent();
         }
 
-
+        #region --功能操作
+        //按钮退出点击
         private void Esc_button_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //按钮确定点击
         private void Ok_button_Click(object sender, EventArgs e)
         {
-            
-            PasswordMunes plogin = new PasswordMunes();
+
+            PasswordMunes plogin = new PasswordMunes();//登录界面PasswordMunes
             plogin.Hide();
             string password = MiYao_input.Text;
-            if(password == "2885171")
+            if (password == "2885171")
             {
 
                 Hide();
@@ -35,7 +37,8 @@ namespace Password
                 MessageBox.Show("登陆失败");
                 Application.Exit();
             }
-            
+
         }
+        #endregion
     }
 }
