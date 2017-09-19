@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Password.SignUp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,5 +36,33 @@ namespace Password
 
             }
         }
+
+        private void sign_up_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SignUpPassWord sign = new SignUpPassWord();
+            sign.Show();
+
+        }
+
+        private void PasswordMunes_Load(object sender, EventArgs e)
+        {
+            mboxOne.Visible = true;
+        }
+
+        #region --绑定事件
+        private void ApplicationExit(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;    //取消关闭
+            }
+        }
+        #endregion
     }
 }

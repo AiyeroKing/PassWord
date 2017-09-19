@@ -11,6 +11,7 @@ namespace Password
         }
 
         #region --功能操作
+
         //按钮退出点击
         private void Esc_button_Click(object sender, EventArgs e)
         {
@@ -24,21 +25,39 @@ namespace Password
             PasswordMunes plogin = new PasswordMunes();//登录界面PasswordMunes
             plogin.Hide();
             string password = MiYao_input.Text;
-            if (password == "2885171")
+            if (password == "")
             {
 
                 Hide();
-                MessageBox.Show("登陆成功");
+                //MessageBox.Show("登陆成功");
                 plogin.Show();
 
             }
             else
             {
-                MessageBox.Show("登陆失败");
+                //MessageBox.Show("登陆失败");
                 Application.Exit();
             }
 
         }
+        #endregion
+
+        #region --绑定事件
+
+        //点击X退出程序
+        private void ApplicationExit(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (result == DialogResult.OK) 
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;    //取消关闭
+                }
+        }
+
         #endregion
     }
 }

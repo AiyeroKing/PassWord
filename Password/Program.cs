@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Password.SignUp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace Password
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new SignUpPassWord());
             Application.Run(new PassMenusOne());
         }
     }
