@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Password
 {
     public partial class PasswordMunes : Form
@@ -27,14 +28,17 @@ namespace Password
         {
             string username = username_input.Text;
             string password = password_input.Text;
-            if(username =="abc2885171" && password == "2885171")
-            {
+            //if(username =="" && password == "")
+            //{
 
-            }
-            else
-            {
+            //}
+            //else
+            //{
 
-            }
+            //}
+            SelectChoose s = new SelectChoose();
+            Hide();
+            s.Show();
         }
 
         private void sign_up_Click(object sender, EventArgs e)
@@ -56,7 +60,7 @@ namespace Password
             DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
-                Application.Exit();
+                    e.Cancel = false;//强制关闭线程 
             }
             else
             {

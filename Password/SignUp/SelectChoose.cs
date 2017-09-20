@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Password.Main;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,24 +9,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Password
+namespace Password.SignUp
 {
-    public partial class MainMenus : Form
+    public partial class SelectChoose : Form
     {
-        public MainMenus()
+        public SelectChoose()
         {
             InitializeComponent();
         }
 
-        #region --绑定事件
-
-        //点击X退出程序
+        #region --封装
         private void ApplicationExit(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
-                e.Cancel = false;
+                e.Cancel = false;//强制关闭线程 
             }
             else
             {
@@ -33,9 +32,20 @@ namespace Password
             }
         }
 
-
-
         #endregion
 
+        private void Select_tel_ok_Click(object sender, EventArgs e)
+        {
+            Hide();
+            MainMenus m = new MainMenus();
+            m.Show();
+        }
+
+        private void Select_Acc_ok_Click(object sender, EventArgs e)
+        {
+            Hide();
+            MainMenusAccount acc = new MainMenusAccount();
+            acc.Show();
+        }
     }
 }

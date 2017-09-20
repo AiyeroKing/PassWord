@@ -35,8 +35,7 @@ namespace Password
             }
             else
             {
-                //MessageBox.Show("登陆失败");
-                Application.Exit();
+                MessageBox.Show("登陆失败");
             }
 
         }
@@ -50,14 +49,16 @@ namespace Password
             DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.OK) 
                 {
-                    Application.Exit();
+                    e.Cancel = false;//强制关闭线程 
                 }
-                else
+            else
                 {
                     e.Cancel = true;    //取消关闭
                 }
         }
 
         #endregion
+
+
     }
 }

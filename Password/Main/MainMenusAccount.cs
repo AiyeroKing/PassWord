@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Password
+namespace Password.Main
 {
-    public partial class MainMenus : Form
+    public partial class MainMenusAccount : Form
     {
-        public MainMenus()
+        public MainMenusAccount()
         {
             InitializeComponent();
         }
@@ -34,8 +34,6 @@ namespace Password
         }
 
 
-
         #endregion
-
     }
 }

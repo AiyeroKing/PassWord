@@ -17,8 +17,10 @@ namespace Password
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new SignUpPassWord());
-            Application.Run(new PassMenusOne());
+            Application.Run(new PassMenusOne());   
+            //Application.Run(new SignUpPassWord()); //注册主界面
+            //Application.Run(new PassMenusOne());  //登录主界面
+            //Application.Run(new MainMenus());   //通讯录主界面
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Password.SignUp
             DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
-                Application.Exit();
+                e.Cancel = false;
             }
             else
             {

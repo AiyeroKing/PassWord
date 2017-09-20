@@ -41,10 +41,9 @@ namespace Password
             // Ok_button
             // 
             this.Ok_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ok_button.Location = new System.Drawing.Point(225, 239);
-            this.Ok_button.Margin = new System.Windows.Forms.Padding(4);
+            this.Ok_button.Location = new System.Drawing.Point(169, 191);
             this.Ok_button.Name = "Ok_button";
-            this.Ok_button.Size = new System.Drawing.Size(100, 31);
+            this.Ok_button.Size = new System.Drawing.Size(75, 25);
             this.Ok_button.TabIndex = 0;
             this.Ok_button.Text = "确定";
             this.Ok_button.UseVisualStyleBackColor = true;
@@ -53,10 +52,9 @@ namespace Password
             // Esc_button
             // 
             this.Esc_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Esc_button.Location = new System.Drawing.Point(448, 239);
-            this.Esc_button.Margin = new System.Windows.Forms.Padding(4);
+            this.Esc_button.Location = new System.Drawing.Point(336, 191);
             this.Esc_button.Name = "Esc_button";
-            this.Esc_button.Size = new System.Drawing.Size(100, 29);
+            this.Esc_button.Size = new System.Drawing.Size(75, 23);
             this.Esc_button.TabIndex = 0;
             this.Esc_button.Text = "退出";
             this.Esc_button.UseVisualStyleBackColor = true;
@@ -64,19 +62,17 @@ namespace Password
             // 
             // MiYao_input
             // 
-            this.MiYao_input.Location = new System.Drawing.Point(327, 135);
-            this.MiYao_input.Margin = new System.Windows.Forms.Padding(4);
+            this.MiYao_input.Location = new System.Drawing.Point(245, 108);
             this.MiYao_input.Name = "MiYao_input";
             this.MiYao_input.PasswordChar = '*';
-            this.MiYao_input.Size = new System.Drawing.Size(297, 25);
+            this.MiYao_input.Size = new System.Drawing.Size(224, 21);
             this.MiYao_input.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("楷体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(152, 136);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(114, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 21);
             this.label1.TabIndex = 2;
@@ -89,8 +85,7 @@ namespace Password
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("方正姚体", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label2.Location = new System.Drawing.Point(95, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(71, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(428, 37);
             this.label2.TabIndex = 3;
@@ -98,17 +93,18 @@ namespace Password
             // 
             // PassMenusOne
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 336);
+            this.ClientSize = new System.Drawing.Size(584, 269);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MiYao_input);
             this.Controls.Add(this.Esc_button);
             this.Controls.Add(this.Ok_button);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "PassMenusOne";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "通行证";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ApplicationExit);
             this.ResumeLayout(false);
