@@ -32,10 +32,14 @@ namespace Password.SignUp
         #region --绑定事件
         private void ApplicationExit(object sender, FormClosingEventArgs e)
         {
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            {
+                return;
+            }
             DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
-                e.Cancel = false;
+                Application.Exit();
             }
             else
             {
