@@ -105,31 +105,32 @@
             // 打包文件ToolStripMenuItem
             // 
             this.打包文件ToolStripMenuItem.Name = "打包文件ToolStripMenuItem";
-            this.打包文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.打包文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打包文件ToolStripMenuItem.Text = "打包文件";
             // 
             // 载入文件ToolStripMenuItem
             // 
             this.载入文件ToolStripMenuItem.Name = "载入文件ToolStripMenuItem";
-            this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.载入文件ToolStripMenuItem.Text = "载入文件";
             // 
             // 通讯录ToolStripMenuItem
             // 
             this.通讯录ToolStripMenuItem.Name = "通讯录ToolStripMenuItem";
-            this.通讯录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.通讯录ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.通讯录ToolStripMenuItem.Text = "通讯录";
+            this.通讯录ToolStripMenuItem.Click += new System.EventHandler(this.通讯录ToolStripMenuItem_Click);
             // 
             // 账号密码管理ToolStripMenuItem
             // 
             this.账号密码管理ToolStripMenuItem.Name = "账号密码管理ToolStripMenuItem";
-            this.账号密码管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.账号密码管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.账号密码管理ToolStripMenuItem.Text = "账号密码管理";
             // 
             // 关闭ToolStripMenuItem
             // 
             this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关闭ToolStripMenuItem.Text = "关闭";
             // 
             // toolStripMenuItem1
@@ -227,6 +228,7 @@
             this.textBox12.Location = new System.Drawing.Point(101, 222);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(295, 157);
             this.textBox12.TabIndex = 3;
             // 
@@ -234,6 +236,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(101, 183);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(150, 21);
             this.textBox6.TabIndex = 3;
             // 
@@ -250,6 +253,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(101, 114);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(99, 21);
             this.textBox4.TabIndex = 3;
             // 
@@ -257,6 +261,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(101, 151);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(134, 21);
             this.textBox5.TabIndex = 3;
             // 
@@ -285,8 +290,10 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(101, 78);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(261, 21);
             this.textBox3.TabIndex = 3;
+            this.textBox3.Text = "热人物任务";
             // 
             // groupBox1
             // 

@@ -38,6 +38,13 @@ namespace Password.Main
         }
 
 
+
         #endregion
+
+        private void 通讯录ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainMenus mm = new MainMenus();
+            mm.Show();
+        }
     }
 }

@@ -46,19 +46,24 @@ namespace Password
         //点击X退出程序
         private void ApplicationExit(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            //第一次e.CloseReasonw为UserClosing
+            if (e.CloseReason == CloseReason.ApplicationExitCall)//判断关闭请求
             {
-                return;
+                return;//如果请求为应用退出请求，那么直接退出；
             }
-            DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                if (result == DialogResult.OK) 
-                {
-                    Application.Exit();
-                }
             else
+            {
+                DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                {
+                    Application.Exit();//执行了此函数；即：e.CloseReason == CloseReason.ApplicationExitCall 原因变为：ApplicationExitCall
+                }
+                else
                 {
                     e.Cancel = true;    //取消关闭
                 }
+            }
+          
         }
 
         #endregion
