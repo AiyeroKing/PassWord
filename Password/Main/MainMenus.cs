@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Password
 {
+  
     public partial class MainMenus : Form
     {
+        public string pathy;
         public MainMenus()
         {
             InitializeComponent();

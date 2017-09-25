@@ -12,6 +12,7 @@ namespace Password.Main
 {
     public partial class MainMenusAccount : Form
     {
+        public string pathy;
         public MainMenusAccount()
         {
             InitializeComponent();

@@ -47,7 +47,7 @@ namespace Password.SignUp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("该用户名！");
+                MessageBox.Show("该用户名无效！");
                 Forgot_username_input.Text = "";
                 Forgot_name_input.Text = "";
                 Forgot_new_password.Text = "";
@@ -67,6 +67,7 @@ namespace Password.SignUp
                 if (name1 == username && name == nam)
                 {
                     XmlNode oldprass = n.ChildNodes[1];//0坐标是用户名  1坐标是密码   2坐标是密码
+                    //oldprass.InnerText = newprossword;
                     n.ChildNodes[1].FirstChild.Value = newprossword;
                     doc.Save(path);
                     MessageBox.Show("修改成功，点击确定后放回登录页面");
@@ -83,7 +84,6 @@ namespace Password.SignUp
                     return;
                 }
             }
-
         }
 
         //绑定关闭菜单

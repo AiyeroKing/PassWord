@@ -196,7 +196,7 @@
             this.LookBack.TabIndex = 0;
             this.LookBack.Text = "找回密码";
             this.LookBack.UseVisualStyleBackColor = false;
-            this.LookBack.Click += new System.EventHandler(this.sign_up_Click);
+            this.LookBack.Click += new System.EventHandler(this.look_back_Click);
             // 
             // sign_up
             // 

@@ -13,11 +13,12 @@ namespace Password.SignUp
 {
     public partial class SelectChoose : Form
     {
+        public string pathone;
         public SelectChoose()
         {
             InitializeComponent();
         }
-
+        
         #region --封装
         private void ApplicationExit(object sender, FormClosingEventArgs e)
         {
@@ -44,6 +45,9 @@ namespace Password.SignUp
 
         private void Select_tel_ok_Click(object sender, EventArgs e)
         {
+            string path = pathone;//全局变量 从登录窗体窗体获取
+            MainMenus pathcy = new MainMenus();
+            pathcy.pathy = path;
             Hide();
             MainMenus m = new MainMenus();
             m.Show();
@@ -51,6 +55,9 @@ namespace Password.SignUp
 
         private void Select_Acc_ok_Click(object sender, EventArgs e)
         {
+            string path = pathone;//全局变量 从登录窗体窗体获取
+            MainMenusAccount pathcy = new MainMenusAccount();
+            pathcy.pathy = path;
             Hide();
             MainMenusAccount acc = new MainMenusAccount();
             acc.Show();

@@ -67,7 +67,7 @@ namespace Password
                 if(name == username && password == passwor)
                 {
                     SelectChoose s = new SelectChoose();
-                    Hide();
+                    s.pathone = path;
                     s.Show();
                 }
                 else
@@ -84,6 +84,13 @@ namespace Password
       
 
         private void sign_up_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SignUpPassWord For = new SignUpPassWord();
+            For.Show();
+
+        }
+        private void look_back_Click(object sender, EventArgs e)
         {
             Hide();
             ForgotPassword For = new ForgotPassword();
