@@ -73,6 +73,7 @@
             // Select_tel_ok
             // 
             this.Select_tel_ok.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Select_tel_ok.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.Select_tel_ok.Location = new System.Drawing.Point(63, 152);
             this.Select_tel_ok.Name = "Select_tel_ok";
             this.Select_tel_ok.Size = new System.Drawing.Size(203, 107);

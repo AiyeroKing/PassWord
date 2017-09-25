@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpPassWord));
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Miyao_input = new System.Windows.Forms.TextBox();
+            this.Sign_Miyao_input = new System.Windows.Forms.TextBox();
             this.Sign_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Sign_password = new System.Windows.Forms.TextBox();
@@ -39,7 +39,7 @@
             this.Sign_username = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.text_user = new System.Windows.Forms.Label();
-            this.OK_Login_button = new System.Windows.Forms.Button();
+            this.OK_Sign_button = new System.Windows.Forms.Button();
             this.Comeback_index_SignIn = new System.Windows.Forms.Button();
             this.ESC_butto_Sign = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,7 +59,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Miyao_input);
+            this.groupBox1.Controls.Add(this.Sign_Miyao_input);
             this.groupBox1.Controls.Add(this.Sign_name);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Sign_password);
@@ -67,33 +67,32 @@
             this.groupBox1.Controls.Add(this.Sign_username);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.text_user);
-            this.groupBox1.Controls.Add(this.OK_Login_button);
+            this.groupBox1.Controls.Add(this.OK_Sign_button);
             this.groupBox1.Controls.Add(this.Comeback_index_SignIn);
             this.groupBox1.Controls.Add(this.ESC_butto_Sign);
             this.groupBox1.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(27, 43);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(521, 289);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "账号密码注册";
             // 
-            // Miyao_input
+            // Sign_Miyao_input
             // 
-            this.Miyao_input.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Miyao_input.Location = new System.Drawing.Point(198, 148);
-            this.Miyao_input.Name = "Miyao_input";
-            this.Miyao_input.PasswordChar = '*';
-            this.Miyao_input.Size = new System.Drawing.Size(125, 29);
-            this.Miyao_input.TabIndex = 8;
+            this.Sign_Miyao_input.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Sign_Miyao_input.Location = new System.Drawing.Point(198, 148);
+            this.Sign_Miyao_input.Name = "Sign_Miyao_input";
+            this.Sign_Miyao_input.PasswordChar = '*';
+            this.Sign_Miyao_input.Size = new System.Drawing.Size(125, 29);
+            this.Sign_Miyao_input.TabIndex = 8;
             // 
             // Sign_name
             // 
             this.Sign_name.Location = new System.Drawing.Point(198, 113);
             this.Sign_name.Name = "Sign_name";
-            this.Sign_name.PasswordChar = '*';
             this.Sign_name.Size = new System.Drawing.Size(139, 29);
             this.Sign_name.TabIndex = 8;
             // 
@@ -148,18 +147,19 @@
             this.text_user.TabIndex = 7;
             this.text_user.Text = "用户名账号：";
             // 
-            // OK_Login_button
+            // OK_Sign_button
             // 
-            this.OK_Login_button.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.OK_Login_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.OK_Login_button.Font = new System.Drawing.Font("幼圆", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.OK_Login_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.OK_Login_button.Location = new System.Drawing.Point(97, 186);
-            this.OK_Login_button.Name = "OK_Login_button";
-            this.OK_Login_button.Size = new System.Drawing.Size(352, 31);
-            this.OK_Login_button.TabIndex = 3;
-            this.OK_Login_button.Text = "注  册";
-            this.OK_Login_button.UseVisualStyleBackColor = false;
+            this.OK_Sign_button.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.OK_Sign_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OK_Sign_button.Font = new System.Drawing.Font("幼圆", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OK_Sign_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OK_Sign_button.Location = new System.Drawing.Point(97, 186);
+            this.OK_Sign_button.Name = "OK_Sign_button";
+            this.OK_Sign_button.Size = new System.Drawing.Size(352, 31);
+            this.OK_Sign_button.TabIndex = 3;
+            this.OK_Sign_button.Text = "注  册";
+            this.OK_Sign_button.UseVisualStyleBackColor = false;
+            this.OK_Sign_button.Click += new System.EventHandler(this.OK_Sign_button_Click);
             // 
             // Comeback_index_SignIn
             // 
@@ -191,7 +191,7 @@
             // 
             this.pictureBox1.Image = global::Password.Properties.Resources.bird;
             this.pictureBox1.Location = new System.Drawing.Point(112, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,7 +207,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignUpPassWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "注册Aiyeroking.sln.PassWord";
@@ -225,7 +225,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox Miyao_input;
+        private System.Windows.Forms.TextBox Sign_Miyao_input;
         private System.Windows.Forms.TextBox Sign_name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Sign_password;
@@ -233,7 +233,7 @@
         private System.Windows.Forms.TextBox Sign_username;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label text_user;
-        private System.Windows.Forms.Button OK_Login_button;
+        private System.Windows.Forms.Button OK_Sign_button;
         private System.Windows.Forms.Button Comeback_index_SignIn;
         private System.Windows.Forms.Button ESC_butto_Sign;
     }

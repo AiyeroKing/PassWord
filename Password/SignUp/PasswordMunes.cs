@@ -51,14 +51,14 @@ namespace Password
                 return;
             }
             XmlNode root = doc.DocumentElement;
-            XmlNode node= root.SelectSingleNode("user");
-            XmlNodeList nodelist = root.SelectNodes("user");
+            XmlNode node= root.SelectSingleNode("Adminiuser");
+            XmlNodeList nodelist = root.SelectNodes("Adminiuser");
             
          //  string  a =  nodelist[0].SelectSingleNode("name").Value;
             //XmlNode newn = null;
             foreach (XmlNode n in nodelist)
             {
-               XmlNode user= n.SelectSingleNode("name");
+               XmlNode user= n.SelectSingleNode("UserAccount");
               string name=  user.FirstChild.Value; //获取到标题中第一个元素的值
                 XmlNode passwords = n.ChildNodes[1];
                 string passwor = passwords.FirstChild.Value;
@@ -75,30 +75,10 @@ namespace Password
                     MessageBox.Show("您的密码有误，请重新输入！");
                     username_input.Text = "";
                     password_input.Text = "";
+                    return;
                 }
             }
-
-
             //this.Controls.Clear();  将空间清除掉的方法，其中this 可替换成容器的名字
-           
-
-            //for(int i=0;i<nodelist.Count;i++)
-            //{
-            //    XmlNode n = nodelist[i];
-            //}
-
-            //if(username =="" && password == "")
-            //{
-
-            //}
-            //else
-            //{
-
-            //}
-            // SelectChoose s = new SelectChoose();
-            // Hide();
-            // s.Show();
-           
         }
 
       
@@ -106,8 +86,8 @@ namespace Password
         private void sign_up_Click(object sender, EventArgs e)
         {
             Hide();
-            SignUpPassWord sign = new SignUpPassWord();
-            sign.Show();
+            ForgotPassword For = new ForgotPassword();
+            For.Show();
 
         }
 

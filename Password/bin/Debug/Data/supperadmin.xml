@@ -1,24 +1,24 @@
-ï»¿<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0" encoding="utf-8" ?> 
 <body>
 <user>
-  <name>admin</name>
-  <password>123456</password>
+  <name>Systemadmin</name>
+  <password>123</password>
 </user>
-  <!--é€šè®¯å½•-->
+  <!--Í¨Ñ¶Â¼-->
 <tel>
   <username>
-    å¼ ä¸‰
+    ÕÅÈý
   </username>
-  <sex>ç”·</sex>
+  <sex>ÄÐ</sex>
   <phone>
     13411111111
   </phone>
 </tel>
 <tel>
   <username>
-    å¼ ä¸‰
+    ÕÅÈý
   </username>
-  <sex>ç”·</sex>
+  <sex>ÄÐ</sex>
   <phone>
     13411111111
   </phone>

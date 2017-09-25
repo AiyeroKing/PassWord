@@ -35,6 +35,7 @@ namespace Password
             this.Esc_button = new System.Windows.Forms.Button();
             this.MiYao_input = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@ namespace Password
             // 
             // MiYao_input
             // 
-            this.MiYao_input.Location = new System.Drawing.Point(245, 108);
+            this.MiYao_input.Location = new System.Drawing.Point(245, 120);
             this.MiYao_input.Name = "MiYao_input";
             this.MiYao_input.PasswordChar = '*';
             this.MiYao_input.Size = new System.Drawing.Size(224, 21);
@@ -72,24 +73,33 @@ namespace Password
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("楷体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(114, 109);
+            this.label1.Location = new System.Drawing.Point(114, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "请输入秘钥";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Axure Handwriting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(101, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(189, 28);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "AiyeroKing.sln.";
+            // 
             // label2
             // 
-            this.label2.AllowDrop = true;
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("方正姚体", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label2.Location = new System.Drawing.Point(71, 30);
+            this.label2.Font = new System.Drawing.Font("Buxton Sketch", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(284, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(428, 37);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "账 号 密 码 登 陆 密 钥 输 入";
+            this.label2.Size = new System.Drawing.Size(226, 29);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Tel-Account管理系统";
             // 
             // PassMenusOne
             // 
@@ -97,6 +107,7 @@ namespace Password
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 269);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MiYao_input);
             this.Controls.Add(this.Esc_button);
@@ -118,7 +129,8 @@ namespace Password
         private System.Windows.Forms.Button Esc_button;
         private System.Windows.Forms.TextBox MiYao_input;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private Label label4;
+        private Label label2;
     }
 }
 
