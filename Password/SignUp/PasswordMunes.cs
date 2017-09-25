@@ -29,9 +29,27 @@ namespace Password
         {
             string username = username_input.Text;
             string password = password_input.Text;
+            //string ex="";
+            if(username == "" || password == "")
+            {
+                MessageBox.Show("用户名或密码为空！请重新输入");
+                username_input.Text = "";
+                password_input.Text = "";
+                return;
+            }
             XmlDocument doc = new XmlDocument();
-            string path = Environment.CurrentDirectory +"\\"+ username+".xml";
-            doc.Load(path);
+            string path = Environment.CurrentDirectory + "\\Data\\" + username+".xml";
+            try
+            {
+                doc.Load(path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("不存在数据文件！");
+                username_input.Text = "";
+                password_input.Text = "";
+                return;
+            }
             XmlNode root = doc.DocumentElement;
             XmlNode node= root.SelectSingleNode("user");
             XmlNodeList nodelist = root.SelectNodes("user");
@@ -41,7 +59,7 @@ namespace Password
             foreach (XmlNode n in nodelist)
             {
                XmlNode user= n.SelectSingleNode("name");
-              string name=  user.FirstChild.Value;
+              string name=  user.FirstChild.Value; //获取到标题中第一个元素的值
                 XmlNode passwords = n.ChildNodes[1];
                 string passwor = passwords.FirstChild.Value;
                 //newn = n;
@@ -52,12 +70,23 @@ namespace Password
                     Hide();
                     s.Show();
                 }
+                else
+                {
+                    MessageBox.Show("您的密码有误，请重新输入！");
+                    username_input.Text = "";
+                    password_input.Text = "";
+                }
             }
 
-            for(int i=0;i<nodelist.Count;i++)
-            {
-                XmlNode n = nodelist[i];
-            }
+
+            //this.Controls.Clear();  将空间清除掉的方法，其中this 可替换成容器的名字
+           
+
+            //for(int i=0;i<nodelist.Count;i++)
+            //{
+            //    XmlNode n = nodelist[i];
+            //}
+
             //if(username =="" && password == "")
             //{
 
@@ -66,10 +95,13 @@ namespace Password
             //{
 
             //}
-           // SelectChoose s = new SelectChoose();
-           // Hide();
-           // s.Show();
+            // SelectChoose s = new SelectChoose();
+            // Hide();
+            // s.Show();
+           
         }
+
+      
 
         private void sign_up_Click(object sender, EventArgs e)
         {

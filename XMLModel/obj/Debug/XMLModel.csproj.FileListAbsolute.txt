@@ -1,0 +1,6 @@
+C:\Users\Aiyero\Desktop\Password\XMLModel\bin\Debug\XMLModel.dll
+C:\Users\Aiyero\Desktop\Password\XMLModel\bin\Debug\XMLModel.pdb
+C:\Users\Aiyero\Desktop\Password\XMLModel\obj\Debug\XMLModel.csprojResolveAssemblyReference.cache
+C:\Users\Aiyero\Desktop\Password\XMLModel\obj\Debug\XMLModel.csproj.CoreCompileInputs.cache
+C:\Users\Aiyero\Desktop\Password\XMLModel\obj\Debug\XMLModel.dll
+C:\Users\Aiyero\Desktop\Password\XMLModel\obj\Debug\XMLModel.pdb
