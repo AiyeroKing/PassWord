@@ -66,8 +66,8 @@ namespace Password
                 //break;
                 if(name == username && password == passwor)
                 {
-                    SelectChoose s = new SelectChoose();
-                    s.pathone = path;
+                    SelectChoose s = new SelectChoose(path);
+                    //s.pathone = path;
                     Hide();
                     s.Show();
                 }

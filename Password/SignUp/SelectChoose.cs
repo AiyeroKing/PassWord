@@ -14,8 +14,9 @@ namespace Password.SignUp
     public partial class SelectChoose : Form
     {
         public string pathone;
-        public SelectChoose()
+        public SelectChoose(string pa)
         {
+            pathone = pa;
             InitializeComponent();
         }
         

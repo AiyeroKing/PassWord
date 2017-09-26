@@ -9,7 +9,7 @@ namespace XMLModel
     public class TelphoneModel
     {
         //ID
-        public int IDnumber { get; set; }
+        public string IDnumber { get; set; }
         //姓名
         public string Name { get; set; }
         //性别

@@ -16,9 +16,11 @@ namespace Password.Main.TelphoneForm
     {
 
         public string pathy;
-
-        public AddTelPhone()
+        public string nuacount;
+        public AddTelPhone(string numAcount,string path)
         {
+            pathy = path;
+            nuacount = numAcount;
             InitializeComponent();
             InitializeComponentTwo();
 
@@ -58,6 +60,8 @@ namespace Password.Main.TelphoneForm
             //MessageBox.Show("取消添加!");
             //this.Close();   //关闭当前窗口
         }
+
+
 
         //点击添加按钮
         private void OK_btn_ADD_Telphone_Click(object sender, EventArgs e)
@@ -103,6 +107,7 @@ namespace Password.Main.TelphoneForm
             XmlElement Tel = xml.CreateElement("Tel");//创建Tel标签节点
             //_body.ChildNodes[_AllNodes.Count + 1].AppendChild(Tel);//将tel标签节点添加到body标签里面
             _body.AppendChild(Tel);
+            XmlElement TelID = xml.CreateElement("TelID");//创建ID标签节点
             XmlElement TelName = xml.CreateElement("TelName");//创建TelName标签节点
             XmlElement TelSex = xml.CreateElement("TelSex");//创建TelSex标签节点
             XmlElement TelTelphone = xml.CreateElement("TelTelphone");//创建TelTelphone标签节点
@@ -115,7 +120,14 @@ namespace Password.Main.TelphoneForm
             XmlElement TelEmai = xml.CreateElement("TelEmai");//创建TelEmai标签节点
             XmlElement TelAddress = xml.CreateElement("TelAddress");//创建TelAddress标签节点
             XmlElement TelRemark = xml.CreateElement("TelRemark");//创建TelRemark标签节点
-
+            if (a == 1 || a == 0)
+            {
+                TelID.InnerText = Convert.ToString(a);
+             }
+            else
+            {
+                TelID.InnerText = Convert.ToString(Convert.ToInt32(nuacount) + 1);
+            }
             TelName.InnerText = _tel.Name;
             TelSex.InnerText = _tel.Sex;
             TelTelphone.InnerText = _tel.Telphone;
@@ -130,6 +142,7 @@ namespace Password.Main.TelphoneForm
             TelRemark.InnerText = _tel.Remark;
             //_AllNodes[_AllNodes.Count + 1].AppendChild(TelName);//将tel标签节点添加到body标签里面
             // _body.ChildNodes[_AllNodes.Count + 1].AppendChild(Tel);//将tel标签节点添加到body标签里面
+            Tel.AppendChild(TelID);//将TelName标签节点添加到Tel标签里面
             Tel.AppendChild(TelName);//将TelName标签节点添加到Tel标签里面
             Tel.AppendChild(TelSex);//将TelSex标签节点添加到Tel标签里面
             Tel.AppendChild(TelTelphone);//将TelTelphone标签节点添加到Tel标签里面
