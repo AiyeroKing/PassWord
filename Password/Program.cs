@@ -1,4 +1,5 @@
-﻿using Password.SignUp;
+﻿using Password.Main;
+using Password.SignUp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,9 @@ namespace Password
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new PassMenusOne());   
             //Application.Run(new SignUpPassWord()); //注册主界面
-            Application.Run(new PasswordMunes());  //登录主界面
-            //Application.Run(new MainMenus());   //通讯录主界面
+            //Application.Run(new PasswordMunes());  //登录主界面
+            Application.Run(new MainMenus());   //通讯录主界面
+             //Application.Run(new MainMenusAccount());   //通讯录主界面
         }
     }
 }

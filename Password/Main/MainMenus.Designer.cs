@@ -34,12 +34,9 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.打包文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.载入文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.通讯录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.账号密码管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助中心ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,15 +44,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Check_Retion_Input = new System.Windows.Forms.ComboBox();
+            this.Check_Tel_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Check_Name_Input = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.Deleted_Tel_btn = new System.Windows.Forms.Button();
+            this.Eidot_Tel_btn = new System.Windows.Forms.Button();
+            this.Add_Tel_btn = new System.Windows.Forms.Button();
+            this.Body_Tel_Listview = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -67,22 +64,32 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Retion = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Idcard = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Remark = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Address = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Company = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Email = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_QQ = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Birthday = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Phone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Sex = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Telphone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.SEE_TEL_Name = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
+            this.lv_IDNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Sex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Retion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Company = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -101,9 +108,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 563);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 522);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1095, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1084, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -117,32 +124,29 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.菜单ToolStripMenuItem,
-            this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1095, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1084, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // 菜单ToolStripMenuItem
             // 
             this.菜单ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.打包文件ToolStripMenuItem,
+            this.ToolStripMenuItem,
             this.载入文件ToolStripMenuItem,
-            this.通讯录ToolStripMenuItem,
-            this.账号密码管理ToolStripMenuItem,
             this.关闭ToolStripMenuItem});
             this.菜单ToolStripMenuItem.Name = "菜单ToolStripMenuItem";
             this.菜单ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.菜单ToolStripMenuItem.Text = "菜单";
             // 
-            // 打包文件ToolStripMenuItem
+            // ToolStripMenuItem
             // 
-            this.打包文件ToolStripMenuItem.Name = "打包文件ToolStripMenuItem";
-            this.打包文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.打包文件ToolStripMenuItem.Text = "打包文件";
+            this.ToolStripMenuItem.Name = "ToolStripMenuItem";
+            this.ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.ToolStripMenuItem.Text = "导出数据文件";
             // 
             // 载入文件ToolStripMenuItem
             // 
@@ -150,29 +154,11 @@
             this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.载入文件ToolStripMenuItem.Text = "载入文件";
             // 
-            // 通讯录ToolStripMenuItem
-            // 
-            this.通讯录ToolStripMenuItem.Name = "通讯录ToolStripMenuItem";
-            this.通讯录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.通讯录ToolStripMenuItem.Text = "通讯录";
-            // 
-            // 账号密码管理ToolStripMenuItem
-            // 
-            this.账号密码管理ToolStripMenuItem.Name = "账号密码管理ToolStripMenuItem";
-            this.账号密码管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.账号密码管理ToolStripMenuItem.Text = "账号密码管理";
-            // 
             // 关闭ToolStripMenuItem
             // 
             this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
             this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.关闭ToolStripMenuItem.Text = "关闭";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(56, 21);
-            this.toolStripMenuItem1.Text = "通讯录";
             // 
             // toolStripMenuItem2
             // 
@@ -199,7 +185,7 @@
             // 
             this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
             this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.关于我们ToolStripMenuItem.Text = "关于我们";
+            this.关于我们ToolStripMenuItem.Text = "关于我";
             // 
             // label4
             // 
@@ -224,15 +210,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.Check_Retion_Input);
+            this.groupBox1.Controls.Add(this.Check_Tel_btn);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Check_Name_Input);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.Deleted_Tel_btn);
+            this.groupBox1.Controls.Add(this.Eidot_Tel_btn);
+            this.groupBox1.Controls.Add(this.Add_Tel_btn);
+            this.groupBox1.Controls.Add(this.Body_Tel_Listview);
             this.groupBox1.Location = new System.Drawing.Point(32, 114);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(614, 408);
@@ -240,28 +226,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "通讯录管理";
             // 
-            // comboBox1
+            // Check_Retion_Input
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Check_Retion_Input.FormattingEnabled = true;
+            this.Check_Retion_Input.Items.AddRange(new object[] {
             "普通朋友",
             "亲人",
             "兄弟",
             "爱人",
             "公司"});
-            this.comboBox1.Location = new System.Drawing.Point(412, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(87, 20);
-            this.comboBox1.TabIndex = 5;
+            this.Check_Retion_Input.Location = new System.Drawing.Point(412, 22);
+            this.Check_Retion_Input.Name = "Check_Retion_Input";
+            this.Check_Retion_Input.Size = new System.Drawing.Size(87, 20);
+            this.Check_Retion_Input.TabIndex = 5;
             // 
-            // button4
+            // Check_Tel_btn
             // 
-            this.button4.Location = new System.Drawing.Point(505, 22);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(58, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "查询";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Check_Tel_btn.Location = new System.Drawing.Point(505, 21);
+            this.Check_Tel_btn.Name = "Check_Tel_btn";
+            this.Check_Tel_btn.Size = new System.Drawing.Size(58, 23);
+            this.Check_Tel_btn.TabIndex = 4;
+            this.Check_Tel_btn.Text = "查询";
+            this.Check_Tel_btn.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -272,12 +258,12 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "关系";
             // 
-            // textBox1
+            // Check_Name_Input
             // 
-            this.textBox1.Location = new System.Drawing.Point(284, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 21);
-            this.textBox1.TabIndex = 3;
+            this.Check_Name_Input.Location = new System.Drawing.Point(284, 22);
+            this.Check_Name_Input.Name = "Check_Name_Input";
+            this.Check_Name_Input.Size = new System.Drawing.Size(87, 21);
+            this.Check_Name_Input.TabIndex = 3;
             // 
             // label2
             // 
@@ -288,40 +274,60 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "姓名";
             // 
-            // button3
+            // Deleted_Tel_btn
             // 
-            this.button3.Location = new System.Drawing.Point(170, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "删除";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Deleted_Tel_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Deleted_Tel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Deleted_Tel_btn.Location = new System.Drawing.Point(170, 20);
+            this.Deleted_Tel_btn.Name = "Deleted_Tel_btn";
+            this.Deleted_Tel_btn.Size = new System.Drawing.Size(75, 23);
+            this.Deleted_Tel_btn.TabIndex = 1;
+            this.Deleted_Tel_btn.Text = "删除";
+            this.Deleted_Tel_btn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Eidot_Tel_btn
             // 
-            this.button2.Location = new System.Drawing.Point(89, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "编辑";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Eidot_Tel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Eidot_Tel_btn.Location = new System.Drawing.Point(89, 20);
+            this.Eidot_Tel_btn.Name = "Eidot_Tel_btn";
+            this.Eidot_Tel_btn.Size = new System.Drawing.Size(75, 23);
+            this.Eidot_Tel_btn.TabIndex = 1;
+            this.Eidot_Tel_btn.Text = "编辑";
+            this.Eidot_Tel_btn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Add_Tel_btn
             // 
-            this.button1.Location = new System.Drawing.Point(8, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "添加";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Add_Tel_btn.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.Add_Tel_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Add_Tel_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Add_Tel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Add_Tel_btn.Location = new System.Drawing.Point(8, 20);
+            this.Add_Tel_btn.Name = "Add_Tel_btn";
+            this.Add_Tel_btn.Size = new System.Drawing.Size(75, 23);
+            this.Add_Tel_btn.TabIndex = 1;
+            this.Add_Tel_btn.Text = "添加";
+            this.Add_Tel_btn.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // Body_Tel_Listview
             // 
-            this.listView1.Location = new System.Drawing.Point(6, 49);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(602, 353);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.Body_Tel_Listview.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.Body_Tel_Listview.AllowColumnReorder = true;
+            this.Body_Tel_Listview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_IDNumber,
+            this.lv_Name,
+            this.lv_Sex,
+            this.lv_Phone,
+            this.lv_Retion,
+            this.lv_Email,
+            this.lv_Company});
+            this.Body_Tel_Listview.FullRowSelect = true;
+            this.Body_Tel_Listview.GridLines = true;
+            this.Body_Tel_Listview.Location = new System.Drawing.Point(6, 49);
+            this.Body_Tel_Listview.Name = "Body_Tel_Listview";
+            this.Body_Tel_Listview.Size = new System.Drawing.Size(602, 353);
+            this.Body_Tel_Listview.TabIndex = 0;
+            this.Body_Tel_Listview.UseCompatibleStateImageBehavior = false;
+            this.Body_Tel_Listview.View = System.Windows.Forms.View.Details;
             // 
             // groupBox2
             // 
@@ -335,21 +341,21 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox14);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox13);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Retion);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Idcard);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Remark);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Address);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Company);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Email);
+            this.groupBox2.Controls.Add(this.SEE_TEL_QQ);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Birthday);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Phone);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Sex);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Telphone);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.SEE_TEL_Name);
             this.groupBox2.Location = new System.Drawing.Point(664, 114);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(419, 408);
@@ -432,11 +438,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 133);
+            this.label8.Location = new System.Drawing.Point(29, 133);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 12);
+            this.label8.Size = new System.Drawing.Size(65, 12);
             this.label8.TabIndex = 2;
-            this.label8.Text = "手机号码主：";
+            this.label8.Text = "手机号码：";
             // 
             // label6
             // 
@@ -447,69 +453,78 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "性别：";
             // 
-            // textBox9
+            // SEE_TEL_Retion
             // 
-            this.textBox9.Location = new System.Drawing.Point(101, 211);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(110, 21);
-            this.textBox9.TabIndex = 3;
+            this.SEE_TEL_Retion.Location = new System.Drawing.Point(101, 211);
+            this.SEE_TEL_Retion.Name = "SEE_TEL_Retion";
+            this.SEE_TEL_Retion.ReadOnly = true;
+            this.SEE_TEL_Retion.Size = new System.Drawing.Size(110, 21);
+            this.SEE_TEL_Retion.TabIndex = 3;
             // 
-            // textBox8
+            // SEE_TEL_Idcard
             // 
-            this.textBox8.Location = new System.Drawing.Point(101, 184);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(278, 21);
-            this.textBox8.TabIndex = 3;
+            this.SEE_TEL_Idcard.Location = new System.Drawing.Point(101, 184);
+            this.SEE_TEL_Idcard.Name = "SEE_TEL_Idcard";
+            this.SEE_TEL_Idcard.ReadOnly = true;
+            this.SEE_TEL_Idcard.Size = new System.Drawing.Size(278, 21);
+            this.SEE_TEL_Idcard.TabIndex = 3;
             // 
-            // textBox14
+            // SEE_TEL_Remark
             // 
-            this.textBox14.Location = new System.Drawing.Point(101, 370);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(295, 21);
-            this.textBox14.TabIndex = 3;
+            this.SEE_TEL_Remark.Location = new System.Drawing.Point(101, 370);
+            this.SEE_TEL_Remark.Name = "SEE_TEL_Remark";
+            this.SEE_TEL_Remark.ReadOnly = true;
+            this.SEE_TEL_Remark.Size = new System.Drawing.Size(295, 21);
+            this.SEE_TEL_Remark.TabIndex = 3;
             // 
-            // textBox12
+            // SEE_TEL_Address
             // 
-            this.textBox12.Location = new System.Drawing.Point(101, 319);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(295, 45);
-            this.textBox12.TabIndex = 3;
+            this.SEE_TEL_Address.Location = new System.Drawing.Point(101, 319);
+            this.SEE_TEL_Address.Multiline = true;
+            this.SEE_TEL_Address.Name = "SEE_TEL_Address";
+            this.SEE_TEL_Address.ReadOnly = true;
+            this.SEE_TEL_Address.Size = new System.Drawing.Size(295, 45);
+            this.SEE_TEL_Address.TabIndex = 3;
             // 
-            // textBox13
+            // SEE_TEL_Company
             // 
-            this.textBox13.Location = new System.Drawing.Point(101, 292);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(246, 21);
-            this.textBox13.TabIndex = 3;
+            this.SEE_TEL_Company.Location = new System.Drawing.Point(101, 292);
+            this.SEE_TEL_Company.Name = "SEE_TEL_Company";
+            this.SEE_TEL_Company.ReadOnly = true;
+            this.SEE_TEL_Company.Size = new System.Drawing.Size(246, 21);
+            this.SEE_TEL_Company.TabIndex = 3;
             // 
-            // textBox11
+            // SEE_TEL_Email
             // 
-            this.textBox11.Location = new System.Drawing.Point(101, 265);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(218, 21);
-            this.textBox11.TabIndex = 3;
+            this.SEE_TEL_Email.Location = new System.Drawing.Point(101, 265);
+            this.SEE_TEL_Email.Name = "SEE_TEL_Email";
+            this.SEE_TEL_Email.ReadOnly = true;
+            this.SEE_TEL_Email.Size = new System.Drawing.Size(218, 21);
+            this.SEE_TEL_Email.TabIndex = 3;
             // 
-            // textBox10
+            // SEE_TEL_QQ
             // 
-            this.textBox10.Location = new System.Drawing.Point(101, 238);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(134, 21);
-            this.textBox10.TabIndex = 3;
+            this.SEE_TEL_QQ.Location = new System.Drawing.Point(101, 238);
+            this.SEE_TEL_QQ.Name = "SEE_TEL_QQ";
+            this.SEE_TEL_QQ.ReadOnly = true;
+            this.SEE_TEL_QQ.Size = new System.Drawing.Size(134, 21);
+            this.SEE_TEL_QQ.TabIndex = 3;
             // 
-            // textBox7
+            // SEE_TEL_Birthday
             // 
-            this.textBox7.Location = new System.Drawing.Point(101, 157);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(150, 21);
-            this.textBox7.TabIndex = 3;
+            this.SEE_TEL_Birthday.Location = new System.Drawing.Point(101, 157);
+            this.SEE_TEL_Birthday.Name = "SEE_TEL_Birthday";
+            this.SEE_TEL_Birthday.ReadOnly = true;
+            this.SEE_TEL_Birthday.Size = new System.Drawing.Size(150, 21);
+            this.SEE_TEL_Birthday.TabIndex = 3;
             // 
-            // textBox6
+            // SEE_TEL_Phone
             // 
-            this.textBox6.Location = new System.Drawing.Point(101, 130);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(150, 21);
-            this.textBox6.TabIndex = 3;
+            this.SEE_TEL_Phone.Location = new System.Drawing.Point(101, 130);
+            this.SEE_TEL_Phone.Name = "SEE_TEL_Phone";
+            this.SEE_TEL_Phone.ReadOnly = true;
+            this.SEE_TEL_Phone.Size = new System.Drawing.Size(150, 21);
+            this.SEE_TEL_Phone.TabIndex = 3;
             // 
             // label7
             // 
@@ -520,19 +535,21 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "电话号码：";
             // 
-            // textBox4
+            // SEE_TEL_Sex
             // 
-            this.textBox4.Location = new System.Drawing.Point(101, 77);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(43, 21);
-            this.textBox4.TabIndex = 3;
+            this.SEE_TEL_Sex.Location = new System.Drawing.Point(101, 77);
+            this.SEE_TEL_Sex.Name = "SEE_TEL_Sex";
+            this.SEE_TEL_Sex.ReadOnly = true;
+            this.SEE_TEL_Sex.Size = new System.Drawing.Size(43, 21);
+            this.SEE_TEL_Sex.TabIndex = 3;
             // 
-            // textBox5
+            // SEE_TEL_Telphone
             // 
-            this.textBox5.Location = new System.Drawing.Point(101, 105);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(134, 21);
-            this.textBox5.TabIndex = 3;
+            this.SEE_TEL_Telphone.Location = new System.Drawing.Point(101, 105);
+            this.SEE_TEL_Telphone.Name = "SEE_TEL_Telphone";
+            this.SEE_TEL_Telphone.ReadOnly = true;
+            this.SEE_TEL_Telphone.Size = new System.Drawing.Size(134, 21);
+            this.SEE_TEL_Telphone.TabIndex = 3;
             // 
             // label9
             // 
@@ -555,28 +572,70 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "姓名：";
             // 
-            // textBox3
+            // SEE_TEL_Name
             // 
-            this.textBox3.Location = new System.Drawing.Point(101, 49);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 21);
-            this.textBox3.TabIndex = 3;
+            this.SEE_TEL_Name.Location = new System.Drawing.Point(101, 49);
+            this.SEE_TEL_Name.Name = "SEE_TEL_Name";
+            this.SEE_TEL_Name.ReadOnly = true;
+            this.SEE_TEL_Name.Size = new System.Drawing.Size(110, 21);
+            this.SEE_TEL_Name.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(366, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(366, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // lv_IDNumber
+            // 
+            this.lv_IDNumber.Text = "序号";
+            this.lv_IDNumber.Width = 40;
+            // 
+            // lv_Name
+            // 
+            this.lv_Name.Text = "姓名";
+            this.lv_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Name.Width = 80;
+            // 
+            // lv_Sex
+            // 
+            this.lv_Sex.Text = "性别";
+            this.lv_Sex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Sex.Width = 40;
+            // 
+            // lv_Phone
+            // 
+            this.lv_Phone.Text = "手机号码";
+            this.lv_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Phone.Width = 120;
+            // 
+            // lv_Retion
+            // 
+            this.lv_Retion.Text = "关系";
+            this.lv_Retion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Retion.Width = 86;
+            // 
+            // lv_Email
+            // 
+            this.lv_Email.Text = "电子邮件";
+            this.lv_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Email.Width = 113;
+            // 
+            // lv_Company
+            // 
+            this.lv_Company.Text = "公司";
+            this.lv_Company.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Company.Width = 150;
+            // 
             // MainMenus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 585);
+            this.ClientSize = new System.Drawing.Size(1084, 544);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -589,7 +648,6 @@
             this.Name = "MainMenus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AiyeroKing.sln.Password";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ApplicationExit);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -610,54 +668,61 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 菜单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 打包文件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 载入文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助中心ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于我们ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem 通讯录ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 账号密码管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Check_Tel_btn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Check_Name_Input;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button Deleted_Tel_btn;
+        private System.Windows.Forms.Button Eidot_Tel_btn;
+        private System.Windows.Forms.Button Add_Tel_btn;
+        private System.Windows.Forms.ListView Body_Tel_Listview;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox SEE_TEL_Sex;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox SEE_TEL_Name;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox SEE_TEL_Retion;
+        private System.Windows.Forms.TextBox SEE_TEL_Idcard;
+        private System.Windows.Forms.TextBox SEE_TEL_QQ;
+        private System.Windows.Forms.TextBox SEE_TEL_Birthday;
+        private System.Windows.Forms.TextBox SEE_TEL_Phone;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox SEE_TEL_Telphone;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox SEE_TEL_Remark;
+        private System.Windows.Forms.TextBox SEE_TEL_Address;
+        private System.Windows.Forms.TextBox SEE_TEL_Company;
+        private System.Windows.Forms.TextBox SEE_TEL_Email;
+        private System.Windows.Forms.ComboBox Check_Retion_Input;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker3;
+        private System.Windows.Forms.ColumnHeader lv_IDNumber;
+        private System.Windows.Forms.ColumnHeader lv_Name;
+        private System.Windows.Forms.ColumnHeader lv_Sex;
+        private System.Windows.Forms.ColumnHeader lv_Phone;
+        private System.Windows.Forms.ColumnHeader lv_Retion;
+        private System.Windows.Forms.ColumnHeader lv_Email;
+        private System.Windows.Forms.ColumnHeader lv_Company;
     }
 }

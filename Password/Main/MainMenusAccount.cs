@@ -13,6 +13,7 @@ namespace Password.Main
     public partial class MainMenusAccount : Form
     {
         public string pathy;
+        public string pathys = "C:\\Users\\Aiyero\\Desktop\\Password\\Password\\bin\\Debug\\Data\\2885171.xml";
         public MainMenusAccount()
         {
             InitializeComponent();
