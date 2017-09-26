@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Password.Main.TelphoneForm;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,19 +19,21 @@ namespace Password
     public partial class MainMenus : Form
     {
         
-        public string pathy;
+        public string pathy = Environment.CurrentDirectory + "\\Data\\abc2885171.xml" ;
+       // public string pathy;
         public MainMenus()
         {
             InitializeComponent();
             ListViewGetData(); 
         }
+        //数据从后台到窗口Listview显示
         public void ListViewGetData()
         {
             XmlDocument doc = new XmlDocument();
-            string path = Environment.CurrentDirectory + "\\Data\\abc2885171.xml";
+            //string path = Environment.CurrentDirectory + "\\Data\\abc2885171.xml";
             try
             {
-                doc.Load(path);
+                doc.Load(pathy);
             }
             catch (Exception ex)
             {
@@ -98,6 +101,8 @@ namespace Password
           
 
         }
+
+
         
 
 
@@ -123,8 +128,17 @@ namespace Password
 
 
 
+
         #endregion
 
+        private void Add_Tel_btn_Click(object sender, EventArgs e)
+        {
+            AddTelPhone ADD = new AddTelPhone();
+            ADD.pathy = pathy;
+            ADD.ShowDialog();
+            //InitializeComponent(); 
+            ListViewGetData();//重新加载页面
 
+        }
     }
 }

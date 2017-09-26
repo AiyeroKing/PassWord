@@ -53,6 +53,13 @@
             this.Eidot_Tel_btn = new System.Windows.Forms.Button();
             this.Add_Tel_btn = new System.Windows.Forms.Button();
             this.Body_Tel_Listview = new System.Windows.Forms.ListView();
+            this.lv_IDNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Sex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Retion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Company = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -83,13 +90,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
-            this.lv_IDNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lv_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lv_Sex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lv_Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lv_Retion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lv_Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lv_Company = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -239,6 +239,7 @@
             this.Check_Retion_Input.Name = "Check_Retion_Input";
             this.Check_Retion_Input.Size = new System.Drawing.Size(87, 20);
             this.Check_Retion_Input.TabIndex = 5;
+            this.Check_Retion_Input.TabStop = false;
             // 
             // Check_Tel_btn
             // 
@@ -307,11 +308,14 @@
             this.Add_Tel_btn.TabIndex = 1;
             this.Add_Tel_btn.Text = "添加";
             this.Add_Tel_btn.UseVisualStyleBackColor = true;
+            this.Add_Tel_btn.Click += new System.EventHandler(this.Add_Tel_btn_Click);
             // 
             // Body_Tel_Listview
             // 
             this.Body_Tel_Listview.Alignment = System.Windows.Forms.ListViewAlignment.Left;
-            this.Body_Tel_Listview.AllowColumnReorder = true;
+            this.Body_Tel_Listview.BackColor = System.Drawing.SystemColors.Info;
+            this.Body_Tel_Listview.BackgroundImageTiled = true;
+            this.Body_Tel_Listview.CheckBoxes = true;
             this.Body_Tel_Listview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.lv_IDNumber,
             this.lv_Name,
@@ -328,6 +332,47 @@
             this.Body_Tel_Listview.TabIndex = 0;
             this.Body_Tel_Listview.UseCompatibleStateImageBehavior = false;
             this.Body_Tel_Listview.View = System.Windows.Forms.View.Details;
+            // 
+            // lv_IDNumber
+            // 
+            this.lv_IDNumber.Text = "序号";
+            this.lv_IDNumber.Width = 40;
+            // 
+            // lv_Name
+            // 
+            this.lv_Name.Text = "姓名";
+            this.lv_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Name.Width = 80;
+            // 
+            // lv_Sex
+            // 
+            this.lv_Sex.Text = "性别";
+            this.lv_Sex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Sex.Width = 40;
+            // 
+            // lv_Phone
+            // 
+            this.lv_Phone.Text = "手机号码";
+            this.lv_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Phone.Width = 120;
+            // 
+            // lv_Retion
+            // 
+            this.lv_Retion.Text = "关系";
+            this.lv_Retion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Retion.Width = 86;
+            // 
+            // lv_Email
+            // 
+            this.lv_Email.Text = "电子邮件";
+            this.lv_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Email.Width = 113;
+            // 
+            // lv_Company
+            // 
+            this.lv_Company.Text = "公司";
+            this.lv_Company.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lv_Company.Width = 150;
             // 
             // groupBox2
             // 
@@ -590,51 +635,11 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // lv_IDNumber
-            // 
-            this.lv_IDNumber.Text = "序号";
-            this.lv_IDNumber.Width = 40;
-            // 
-            // lv_Name
-            // 
-            this.lv_Name.Text = "姓名";
-            this.lv_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lv_Name.Width = 80;
-            // 
-            // lv_Sex
-            // 
-            this.lv_Sex.Text = "性别";
-            this.lv_Sex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lv_Sex.Width = 40;
-            // 
-            // lv_Phone
-            // 
-            this.lv_Phone.Text = "手机号码";
-            this.lv_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lv_Phone.Width = 120;
-            // 
-            // lv_Retion
-            // 
-            this.lv_Retion.Text = "关系";
-            this.lv_Retion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lv_Retion.Width = 86;
-            // 
-            // lv_Email
-            // 
-            this.lv_Email.Text = "电子邮件";
-            this.lv_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lv_Email.Width = 113;
-            // 
-            // lv_Company
-            // 
-            this.lv_Company.Text = "公司";
-            this.lv_Company.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lv_Company.Width = 150;
-            // 
             // MainMenus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1084, 544);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
