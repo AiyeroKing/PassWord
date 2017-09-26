@@ -120,7 +120,6 @@
             this.通讯录ToolStripMenuItem.Name = "通讯录ToolStripMenuItem";
             this.通讯录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.通讯录ToolStripMenuItem.Text = "通讯录";
-            this.通讯录ToolStripMenuItem.Click += new System.EventHandler(this.通讯录ToolStripMenuItem_Click);
             // 
             // 账号密码管理ToolStripMenuItem
             // 

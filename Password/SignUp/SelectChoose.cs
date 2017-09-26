@@ -46,21 +46,23 @@ namespace Password.SignUp
         private void Select_tel_ok_Click(object sender, EventArgs e)
         {
             string path = pathone;//全局变量 从登录窗体窗体获取
-            MainMenus pathcy = new MainMenus();
-            pathcy.pathy = path;
+            MainMenus pathcy = new MainMenus(path);
             Hide();
-            MainMenus m = new MainMenus();
-            m.Show();
+            // MainMenus m = new MainMenus();
+            pathcy.Show();
         }
 
         private void Select_Acc_ok_Click(object sender, EventArgs e)
         {
-            string path = pathone;//全局变量 从登录窗体窗体获取
-            MainMenusAccount pathcy = new MainMenusAccount();
-            pathcy.pathy = path;
+            //string path = pathone;//全局变量 从登录窗体窗体获取
+            //MainMenusAccount pathcy = new MainMenusAccount();
+            //pathcy.pathy = path;
             Hide();
             MainMenusAccount acc = new MainMenusAccount();
             acc.Show();
         }
+
+     
+        
     }
 }

@@ -13,10 +13,13 @@ namespace Password.Main
     public partial class MainMenusAccount : Form
     {
         public string pathy;
-        public string pathys = "C:\\Users\\Aiyero\\Desktop\\Password\\Password\\bin\\Debug\\Data\\2885171.xml";
+       // public string pathys = "C:\\Users\\Aiyero\\Desktop\\Password\\Password\\bin\\Debug\\Data\\2885171.xml";
+        public int timTwo = 0;
         public MainMenusAccount()
         {
             InitializeComponent();
+          
+
         }
 
         #region --绑定事件
@@ -43,10 +46,10 @@ namespace Password.Main
 
         #endregion
 
-        private void 通讯录ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MainMenus mm = new MainMenus();
-            mm.Show();
-        }
+        //private void 通讯录ToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    MainMenus mm = new MainMenus(pathy);
+        //    mm.Show();
+        //}
     }
 }

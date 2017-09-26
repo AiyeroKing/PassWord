@@ -15,16 +15,24 @@ using XMLModel;
 
 namespace Password
 {
-  
+    
+
     public partial class MainMenus : Form
     {
-        
-        public string pathy = Environment.CurrentDirectory + "\\Data\\abc2885171.xml" ;
-       // public string pathy;
-        public MainMenus()
+
+        //public string pathy = Environment.CurrentDirectory + "\\Data\\abc2885171.xml" ;
+        public string pathy;
+        public int times;
+        public MainMenus(string path)
         {
             InitializeComponent();
-            ListViewGetData(); 
+            pathy = path;
+            ListViewGetData();
+
+        }
+        public void GetVule(string p)
+        {
+            pathy = p;
         }
         //数据从后台到窗口Listview显示
         public void ListViewGetData()
@@ -85,10 +93,10 @@ namespace Password
             //清空列表是
             Body_Tel_Listview.Items.Clear();
             //把list列表类型转换成对象表示出来
-            foreach(TelphoneModel _one in _tellist)
+            foreach (TelphoneModel _one in _tellist)
             {
                 ListViewItem lv = new ListViewItem();
-                lv.Text =  Convert.ToString(_one.IDnumber);
+                lv.Text = Convert.ToString(_one.IDnumber);
                 lv.SubItems.Add(_one.Name);
                 lv.SubItems.Add(_one.Sex);
                 lv.SubItems.Add(_one.Phone);
@@ -98,12 +106,12 @@ namespace Password
                 //一定记得行数据创建完毕后添加到列表中
                 Body_Tel_Listview.Items.Add(lv);
             }
-          
+
 
         }
 
 
-        
+
 
 
         #region --绑定事件
@@ -134,7 +142,7 @@ namespace Password
         private void Add_Tel_btn_Click(object sender, EventArgs e)
         {
             AddTelPhone ADD = new AddTelPhone();
-            ADD.pathy = pathy;
+            //ADD.pathy = pathy;
             ADD.ShowDialog();
             //InitializeComponent(); 
             ListViewGetData();//重新加载页面

@@ -68,6 +68,7 @@ namespace Password
                 {
                     SelectChoose s = new SelectChoose();
                     s.pathone = path;
+                    Hide();
                     s.Show();
                 }
                 else

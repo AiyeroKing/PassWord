@@ -142,9 +142,6 @@ namespace Password.Main.TelphoneForm
             Tel.AppendChild(TelEmai);//将TelEmai标签节点添加到Tel标签里面
             Tel.AppendChild(TelAddress);//将TelAddress标签节点添加到Tel标签里面
             Tel.AppendChild(TelRemark);//将TelRemark标签节点添加到Tel标签里面
-
-
-
             xml.Save(pathy);
 
             XmlDocument doc = new XmlDocument();//创建XML文件在内存中
