@@ -81,7 +81,7 @@ namespace Password.Main.TelphoneForm
                         _telModel.Company = NeChild.Item(9).InnerText;
                         _telModel.Email = NeChild.Item(10).InnerText;
                         _telModel.Address = NeChild.Item(11).InnerText;
-                        _telModel.Remark = NeChild.Item(11).InnerText;
+                        _telModel.Remark = NeChild.Item(12).InnerText;
                     }
                 }
             }

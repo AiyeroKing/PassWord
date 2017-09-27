@@ -6,29 +6,6 @@
     <Name>a</Name>
   </Adminiuser>
   <Tel>
-    <TelID>1</TelID>
-    <TelName>123</TelName>
-    <TelSex>未填</TelSex>
-    <TelTelphone>
-    </TelTelphone>
-    <TelPhone>
-    </TelPhone>
-    <TelBirthday>2010年10月10日</TelBirthday>
-    <TelQQ>
-    </TelQQ>
-    <TelIdcard>
-    </TelIdcard>
-    <TelRetion>兄弟</TelRetion>
-    <TelCompany>
-    </TelCompany>
-    <TelEmai>
-    </TelEmai>
-    <TelAddress>
-    </TelAddress>
-    <TelRemark>
-    </TelRemark>
-  </Tel>
-  <Tel>
     <TelID>3</TelID>
     <TelName>爱影魔</TelName>
     <TelSex>男</TelSex>
@@ -42,5 +19,29 @@
     <TelEmai>578953480@qq.com</TelEmai>
     <TelAddress>广西省桂林市</TelAddress>
     <TelRemark>我就是我</TelRemark>
+  </Tel>
+  <Tel>
+    <TelID>4</TelID>
+    <TelName>
+    </TelName>
+    <TelSex>未填</TelSex>
+    <TelTelphone>
+    </TelTelphone>
+    <TelPhone>
+    </TelPhone>
+    <TelBirthday>2010年10月10日</TelBirthday>
+    <TelQQ>
+    </TelQQ>
+    <TelIdcard>
+    </TelIdcard>
+    <TelRetion>普通朋友</TelRetion>
+    <TelCompany>
+    </TelCompany>
+    <TelEmai>
+    </TelEmai>
+    <TelAddress>
+    </TelAddress>
+    <TelRemark>
+    </TelRemark>
   </Tel>
 </body>

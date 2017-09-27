@@ -335,6 +335,7 @@
             this.Body_Tel_Listview.TabIndex = 0;
             this.Body_Tel_Listview.UseCompatibleStateImageBehavior = false;
             this.Body_Tel_Listview.View = System.Windows.Forms.View.Details;
+            this.Body_Tel_Listview.ItemActivate += new System.EventHandler(this.Body_Tel_Listview_ItemActivate);
             // 
             // lv_Number
             // 

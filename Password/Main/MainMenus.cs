@@ -30,9 +30,9 @@ namespace Password
             InitializeComponent();
             pathy = path;
             ListViewGetData();
+            initializecomponenttwo();
 
         }
-
         //数据从后台到窗口Listview显示
         public void ListViewGetData()
         {
@@ -83,7 +83,7 @@ namespace Password
                     _telModel.Company = NeChild.Item(9).InnerText;
                     _telModel.Email = NeChild.Item(10).InnerText;
                     _telModel.Address = NeChild.Item(11).InnerText;
-                    _telModel.Remark = NeChild.Item(11).InnerText;
+                    _telModel.Remark = NeChild.Item(12).InnerText;
                     //将对象转换成list表类型
                     _tellist.Add(_telModel);
                     numCount = NeChild.Item(0).InnerText;
@@ -114,27 +114,6 @@ namespace Password
 
 
         }
-        
-        #region --绑定事件
-        //点击X退出程序
-        private void ApplicationExit(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.ApplicationExitCall)
-            {
-                return;
-            }
-            DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (result == DialogResult.OK)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;    //取消关闭
-            }
-        }
-        #endregion
-
         //添加按钮
         private void Add_Tel_btn_Click(object sender, EventArgs e)
         {
@@ -203,6 +182,7 @@ namespace Password
         //查询按钮
         private void Check_Tel_btn_Click(object sender, EventArgs e)
         {
+            initializecomponenttwo();
             string lookName = Check_Name_Input.Text;
             string lookRetion = Check_Retion_Input.Text;
             XmlDocument doc = new XmlDocument();
@@ -260,7 +240,7 @@ namespace Password
                         _telModel.Company = NeChild.Item(9).InnerText;
                         _telModel.Email = NeChild.Item(10).InnerText;
                         _telModel.Address = NeChild.Item(11).InnerText;
-                        _telModel.Remark = NeChild.Item(11).InnerText;
+                        _telModel.Remark = NeChild.Item(12).InnerText;
                         //将对象转换成list表类型
                         _tellist.Add(_telModel);
                         numCount = NeChild.Item(0).InnerText;
@@ -326,6 +306,145 @@ namespace Password
                   ListViewGetData();//重新加载页面
             }
         }
+        //点击列表发生事件
+        private void Body_Tel_Listview_ItemActivate(object sender, EventArgs e)
+        {
+            _ItemActivate();
+        }
+        //调用方法
+        public void _ItemActivate()
+        {
+            int kkk = 0;
+            int mmmm = Body_Tel_Listview.CheckedItems.Count;
+            string[] aaaa = new string[mmmm];
+            int[] ccc = new int[mmmm];
+
+            Queue<string> Q = new Queue<string>();
+            bool cctv = false;
+            for (int iii = 0; iii < mmmm; iii++)
+                if (Body_Tel_Listview.CheckedItems[iii].Checked)
+                    Q.Enqueue(Body_Tel_Listview.CheckedItems[iii].SubItems[6].Text);
+            while (Q.Count > 0)
+            {
+                cctv = true;
+                aaaa[kkk] = Q.Dequeue();
+                kkk++;
+            }
+            if (!cctv)
+            {
+                //MessageBox.Show("没有选中下列信息");
+                return;
+            }
+            else if (cctv)
+            {
+                string sck = aaaa[0];
+                initializecomponenttwo();
+
+                 XmlDocument doc = new XmlDocument();
+                //string path = Environment.CurrentDirectory + "\\Data\\abc2885171.xml";
+                try
+                {
+                    doc.Load(pathy);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("不存在数据文件！");
+                    return;
+                }
+                List<TelphoneModel> _tellist = new List<TelphoneModel>();
+
+                //doc.Load(@pathys);
+                // 得到根节点body
+                XmlNode _body = doc.SelectSingleNode("body");
+                // 得到二级根节点Tel
+                XmlNode _Tel = _body.SelectSingleNode("Tel");
+                int i = 1;
+                // 得到根节点的所有子节点
+                XmlNodeList _AllNodes = _body.ChildNodes;
+                TelphoneModel _telModel = new TelphoneModel();
+                //将所有的元素放进_telModel对象里面
+                foreach (XmlNode _oneNode in _AllNodes)
+                {
+                    if (i == 1)
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        i++;
+                        // 将节点转换为元素，便于得到节点的属性值
+                        XmlElement Ne = (XmlElement)_oneNode;//Ne指的元素类型节点
+                        XmlNodeList NeChild = Ne.ChildNodes;
+                        string idcv = NeChild.Item(0).InnerText;
+
+                        if (sck == idcv)
+                        {
+                            _telModel.IDnumber = NeChild.Item(0).InnerText;
+                            _telModel.Name = NeChild.Item(1).InnerText;
+                            _telModel.Sex = NeChild.Item(2).InnerText;
+                            _telModel.Telphone = NeChild.Item(3).InnerText;
+                            _telModel.Phone = NeChild.Item(4).InnerText;
+                            _telModel.Birthday = NeChild.Item(5).InnerText;
+                            _telModel.QQ = NeChild.Item(6).InnerText;
+                            _telModel.Idcard = NeChild.Item(7).InnerText;
+                            _telModel.Retion = NeChild.Item(8).InnerText;
+                            _telModel.Company = NeChild.Item(9).InnerText;
+                            _telModel.Email = NeChild.Item(10).InnerText;
+                            _telModel.Address = NeChild.Item(11).InnerText;
+                            _telModel.Remark = NeChild.Item(12).InnerText;
+                        }
+                    }
+                }
+                //赋值初始化
+                SEE_TEL_Name.Text = _telModel.Name;
+                SEE_TEL_Sex.Text = _telModel.Sex;
+                SEE_TEL_Telphone.Text = _telModel.Telphone;
+                SEE_TEL_Phone.Text = _telModel.Phone;
+                SEE_TEL_Birthday.Text = _telModel.Birthday;
+                SEE_TEL_Idcard.Text = _telModel.Idcard;
+                SEE_TEL_Retion.Text = _telModel.Retion;
+                SEE_TEL_QQ.Text = _telModel.QQ;
+                SEE_TEL_Email.Text = _telModel.Email;
+                SEE_TEL_Company.Text = _telModel.Company;
+                SEE_TEL_Address.Text = _telModel.Address;
+                SEE_TEL_Remark.Text = _telModel.Remark;
+            }
+        }
+        //初始化右侧
+         public void initializecomponenttwo()
+        {
+            SEE_TEL_Name.Text = "";
+            SEE_TEL_Sex.Text = "";
+            SEE_TEL_Telphone.Text = "";
+            SEE_TEL_Phone.Text = "";
+            SEE_TEL_Birthday.Text = "";
+            SEE_TEL_Idcard.Text = "";
+            SEE_TEL_Retion.Text = "";
+            SEE_TEL_QQ.Text = "";
+            SEE_TEL_Email.Text = "";
+            SEE_TEL_Company.Text = "";
+            SEE_TEL_Address.Text = "";
+            SEE_TEL_Remark.Text = "";
+        }
+        #region --绑定事件
+        //点击X退出程序
+        private void ApplicationExit(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            {
+                return;
+            }
+            DialogResult result = MessageBox.Show("你确定要关闭吗！", "提示信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;    //取消关闭
+            }
+        }
+        #endregion
     }
 }
 
