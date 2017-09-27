@@ -21,9 +21,10 @@ namespace Password
     {
 
         //public string pathy = Environment.CurrentDirectory + "\\Data\\abc2885171.xml";
-        public string numCount;
-        public string pathy;
-        public int times;
+        public string numCount;//总和
+        public string pathy;//文件路径
+        public int times; //次数
+
         public MainMenus(string path)
         {
             InitializeComponent();
@@ -86,6 +87,9 @@ namespace Password
                     //将对象转换成list表类型
                     _tellist.Add(_telModel);
                     numCount = NeChild.Item(0).InnerText;
+                
+                    
+
                 }
             }
             //清空列表是
@@ -110,13 +114,8 @@ namespace Password
 
 
         }
-
-
-
-
-
+        
         #region --绑定事件
-
         //点击X退出程序
         private void ApplicationExit(object sender, FormClosingEventArgs e)
         {
@@ -134,12 +133,9 @@ namespace Password
                 e.Cancel = true;    //取消关闭
             }
         }
-
-
-
-
         #endregion
 
+        //添加按钮
         private void Add_Tel_btn_Click(object sender, EventArgs e)
         {
             AddTelPhone ADD = new AddTelPhone(numCount, pathy);
@@ -149,7 +145,7 @@ namespace Password
             ListViewGetData();//重新加载页面
 
         }
-        //删除
+        //删除按钮
         private void Deleted_Tel_btn_Click(object sender, EventArgs e)
         {
             //TelphoneModel tel = new TelphoneModel();
@@ -168,6 +164,15 @@ namespace Password
             {
                 a[k] = Q.Dequeue();
                 k++;
+            }
+            if(k > 0)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("没有选中下列信息");
+                return;
             }
             try
             {
@@ -195,84 +200,132 @@ namespace Password
 
             }
         }
+        //查询按钮
+        private void Check_Tel_btn_Click(object sender, EventArgs e)
+        {
+            string lookName = Check_Name_Input.Text;
+            string lookRetion = Check_Retion_Input.Text;
+            XmlDocument doc = new XmlDocument();
+            try
+            {
+                doc.Load(pathy);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("不存在数据文件！");
+                return;
+            }
+            List<TelphoneModel> _tellist = new List<TelphoneModel>();
 
- 
-        
+            //doc.Load(@pathys);
+            // 得到根节点body
+            XmlNode _body = doc.SelectSingleNode("body");
+            // 得到二级根节点Tel
+            XmlNode _Tel = _body.SelectSingleNode("Tel");
+            int i = 1;
+            // 得到根节点的所有子节点
+            XmlNodeList _AllNodes = _body.ChildNodes;
+            //将所有的元素放进_telModel对象里面
+            foreach (XmlNode _oneNode in _AllNodes)
+            {
+                if (i == 1)
+                {
+                    i++;
+                }
+                else
+                {
+                    i++;
+                    TelphoneModel _telModel = new TelphoneModel();
+                    // 将节点转换为元素，便于得到节点的属性值
+                    XmlElement Ne = (XmlElement)_oneNode;//Ne指的元素类型节点
+                    XmlNodeList NeChild = Ne.ChildNodes;
 
 
+                    _telModel.Retion = NeChild.Item(8).InnerText;
+                    _telModel.Name = NeChild.Item(1).InnerText;
+                    
+                    bool check1 = (_telModel.Name).Contains(lookName);
+                    bool check2 = (_telModel.Retion).Contains(lookRetion);
+                    if (check1 && check2)
+                    {
+                        _telModel.IDnumber = NeChild.Item(0).InnerText;
+                        _telModel.Name = NeChild.Item(1).InnerText;
+                        _telModel.Sex = NeChild.Item(2).InnerText;
+                        _telModel.Telphone = NeChild.Item(3).InnerText;
+                        _telModel.Phone = NeChild.Item(4).InnerText;
+                        _telModel.Birthday = NeChild.Item(5).InnerText;
+                        _telModel.QQ = NeChild.Item(6).InnerText;
+                        _telModel.Idcard = NeChild.Item(7).InnerText;
+                        _telModel.Retion = NeChild.Item(8).InnerText;
+                        _telModel.Company = NeChild.Item(9).InnerText;
+                        _telModel.Email = NeChild.Item(10).InnerText;
+                        _telModel.Address = NeChild.Item(11).InnerText;
+                        _telModel.Remark = NeChild.Item(11).InnerText;
+                        //将对象转换成list表类型
+                        _tellist.Add(_telModel);
+                        numCount = NeChild.Item(0).InnerText;
+                    }
+                    else
+                    { }
+                }
+            }
+            //清空列表是
+            Body_Tel_Listview.Items.Clear();
+            //把list列表类型转换成对象表示出来
+            int bll = 1;
+            foreach (TelphoneModel _one in _tellist)
+            {
+                ListViewItem lv = new ListViewItem();
+                lv.Text = Convert.ToString(bll);
+                lv.SubItems.Add(_one.Name);
+                lv.SubItems.Add(_one.Sex);
+                lv.SubItems.Add(_one.Phone);
+                lv.SubItems.Add(_one.Retion);
+                lv.SubItems.Add(_one.Email);
+                lv.SubItems.Add(_one.IDnumber);
+                bll++;
+                //一定记得行数据创建完毕后添加到列表中
+                Body_Tel_Listview.Items.Add(lv);
+            }
+        }
+        //编辑按钮
+        private void Eidot_Tel_btn_Click(object sender, EventArgs e)
+        {
+            string numID ="";
+            int kkk = 0;
+            int mmmm = Body_Tel_Listview.CheckedItems.Count;
+            string[] aaaa = new string[mmmm];
+            int[] ccc = new int[mmmm];
 
+            Queue<string> Q = new Queue<string>();
 
-        ////复选框的值
-        //private void Body_Tel_Listview_ItemChecked(object sender, ItemCheckedEventArgs e)
-        //{
-        //    //e.Item.Selected = e.Item.Checked;
-        //    //int m = Body_Tel_Listview.CheckedItems.Count;
-        //    //label1.Text = "当前选中数：" + m.ToString();
-        //    int k = 0;
-        //    int m = Body_Tel_Listview.CheckedItems.Count;
-        //    string[] a = new string[m];
-        //    Queue<string> Q = new Queue<string>();
-
-        //    for (int i = 0; i < m; i++)
-        //        if (Body_Tel_Listview.CheckedItems[i].Checked)
-        //            Q.Enqueue(Body_Tel_Listview.CheckedItems[i].SubItems[1].Text);
-        //    while (Q.Count > 0)
-        //    {
-        //        a[k] = Q.Dequeue();
-        //        k++;
-        //    }
-        //}
-        #region --单选复选框
-        //选中复选框
-        //private void Body_Tel_Listview_ItemCheck(object sender, ItemCheckEventArgs e)
-        //{
-        //    if (!Body_Tel_Listview.Items[e.Index].Checked)//如果点击的CheckBoxes没有选中  
-        //    {
-        //        foreach (ListViewItem lv in Body_Tel_Listview.Items)
-        //        {
-        //            if (lv.Checked)//取消所有已选中的CheckBoxes  
-        //            {
-        //                lv.Checked = false;
-        //                lv.Selected = false;
-        //                // lv.BackColor = Color.White;  
-        //            }
-        //        }
-        //        Body_Tel_Listview.Items[e.Index].Selected = true;
-        //        // lv.Checked = false;  
-        //    }
-        //}
-        //private void Body_Tel_Listview_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-
-        //    foreach (ListViewItem lv in Body_Tel_Listview.Items)
-        //    {
-
-        //        if (lv.Selected)
-        //        {
-        //            //if (lv.Checked)  
-        //            //{  
-        //            //    //lv.Checked = false;  
-        //            //}  
-        //            //else  
-        //            //{  
-        //            lv.Checked = true;
-        //            //}  
-        //        }
-        //        else
-        //        {
-        //            if (Body_Tel_Listview.SelectedIndices.Count >)
-        //            {
-        //                if (lv.Checked)
-        //                {
-        //                    lv.Checked = false;
-        //                }
-        //            }
-
-        //        }
-        //    }
-
-        //}
-        #endregion
+            for (int iii = 0; iii < mmmm; iii++)
+                if (Body_Tel_Listview.CheckedItems[iii].Checked)
+                    Q.Enqueue(Body_Tel_Listview.CheckedItems[iii].SubItems[6].Text);
+            while (Q.Count > 0)
+            {
+                aaaa[kkk] = Q.Dequeue();
+                kkk++;
+            }
+            if (kkk > 1)
+            {
+                MessageBox.Show("您选中的多个信息，无法编辑请选择一个；");
+                return;
+            }
+            else if(kkk==0)
+            {
+                MessageBox.Show("没有选中下列信息");
+                return;
+            }
+            else if(kkk == 1)
+            {
+                  string sck = aaaa[0];
+                  EdiotTelPhone Ediot = new EdiotTelPhone(sck, pathy);
+                  Ediot.ShowDialog();
+                  //InitializeComponent(); 
+                  ListViewGetData();//重新加载页面
+            }
+        }
     }
 }
 

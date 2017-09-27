@@ -75,7 +75,7 @@ namespace Password.Main.TelphoneForm
             _tel.Phone = ADD_TEL_Phone.Text;
             _tel.Birthday = ADD_TEL_Birthday.Text;
             _tel.Idcard = ADD_TEL_Idcard.Text;
-            _tel.Remark = ADD_TEL_Retion.Text;
+            _tel.Retion = ADD_TEL_Retion.Text;
             _tel.QQ = ADD_TEL_QQ.Text;
             _tel.Email = ADD_TEL_Email.Text;
             _tel.Company = ADD_TEL_Company.Text;
