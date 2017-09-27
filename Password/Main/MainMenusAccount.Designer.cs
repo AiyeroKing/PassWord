@@ -33,11 +33,8 @@
             this.菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.打包文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.载入文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.通讯录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.账号密码管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Close_Account_Program = new System.Windows.Forms.ToolStripMenuItem();
+            this.Select_Tel_Form_btn = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助中心ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于我们ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,8 +84,7 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.菜单ToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
+            this.Select_Tel_Form_btn,
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -101,9 +97,7 @@
             this.菜单ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.打包文件ToolStripMenuItem,
             this.载入文件ToolStripMenuItem,
-            this.通讯录ToolStripMenuItem,
-            this.账号密码管理ToolStripMenuItem,
-            this.关闭ToolStripMenuItem});
+            this.Close_Account_Program});
             this.菜单ToolStripMenuItem.Name = "菜单ToolStripMenuItem";
             this.菜单ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.菜单ToolStripMenuItem.Text = "菜单";
@@ -111,44 +105,26 @@
             // 打包文件ToolStripMenuItem
             // 
             this.打包文件ToolStripMenuItem.Name = "打包文件ToolStripMenuItem";
-            this.打包文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.打包文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打包文件ToolStripMenuItem.Text = "打包文件";
             // 
             // 载入文件ToolStripMenuItem
             // 
             this.载入文件ToolStripMenuItem.Name = "载入文件ToolStripMenuItem";
-            this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.载入文件ToolStripMenuItem.Text = "载入文件";
             // 
-            // 通讯录ToolStripMenuItem
+            // Close_Account_Program
             // 
-            this.通讯录ToolStripMenuItem.Name = "通讯录ToolStripMenuItem";
-            this.通讯录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.通讯录ToolStripMenuItem.Text = "通讯录";
+            this.Close_Account_Program.Name = "Close_Account_Program";
+            this.Close_Account_Program.Size = new System.Drawing.Size(152, 22);
+            this.Close_Account_Program.Text = "关闭";
             // 
-            // 账号密码管理ToolStripMenuItem
+            // Select_Tel_Form_btn
             // 
-            this.账号密码管理ToolStripMenuItem.Name = "账号密码管理ToolStripMenuItem";
-            this.账号密码管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.账号密码管理ToolStripMenuItem.Text = "账号密码管理";
-            // 
-            // 关闭ToolStripMenuItem
-            // 
-            this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.关闭ToolStripMenuItem.Text = "关闭";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(56, 21);
-            this.toolStripMenuItem1.Text = "通讯录";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(68, 21);
-            this.toolStripMenuItem2.Text = "账号管理";
+            this.Select_Tel_Form_btn.Name = "Select_Tel_Form_btn";
+            this.Select_Tel_Form_btn.Size = new System.Drawing.Size(56, 21);
+            this.Select_Tel_Form_btn.Text = "通讯录";
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -162,13 +138,13 @@
             // 帮助中心ToolStripMenuItem
             // 
             this.帮助中心ToolStripMenuItem.Name = "帮助中心ToolStripMenuItem";
-            this.帮助中心ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.帮助中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.帮助中心ToolStripMenuItem.Text = "帮助中心";
             // 
             // 关于我们ToolStripMenuItem
             // 
             this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
-            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于我们ToolStripMenuItem.Text = "关于我们";
             // 
             // pictureBox1
@@ -541,11 +517,8 @@
         private System.Windows.Forms.ToolStripMenuItem 菜单ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打包文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 载入文件ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 通讯录ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 账号密码管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem Close_Account_Program;
+        private System.Windows.Forms.ToolStripMenuItem Select_Tel_Form_btn;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助中心ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于我们ToolStripMenuItem;

@@ -46,6 +46,7 @@ namespace Password
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 MessageBox.Show("不存在数据文件！");
                 username_input.Text = "";
                 password_input.Text = "";

@@ -44,6 +44,7 @@ namespace Password
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 MessageBox.Show("不存在数据文件！");
                 return;
             }
@@ -192,6 +193,7 @@ namespace Password
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 MessageBox.Show("不存在数据文件！");
                 return;
             }
@@ -271,7 +273,7 @@ namespace Password
         //编辑按钮
         private void Eidot_Tel_btn_Click(object sender, EventArgs e)
         {
-            string numID ="";
+            
             int kkk = 0;
             int mmmm = Body_Tel_Listview.CheckedItems.Count;
             string[] aaaa = new string[mmmm];
@@ -348,6 +350,7 @@ namespace Password
                 }
                 catch (Exception ex)
                 {
+                    string ExceptionTosting = Convert.ToString(ex);
                     MessageBox.Show("不存在数据文件！");
                     return;
                 }

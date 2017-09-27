@@ -90,6 +90,7 @@ namespace Password.Main.TelphoneForm
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 MessageBox.Show("不存在数据文件！");
                 return;
             }
@@ -164,6 +165,7 @@ namespace Password.Main.TelphoneForm
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 MessageBox.Show("不存在数据文件！");
                 return;
             }

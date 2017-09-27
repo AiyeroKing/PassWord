@@ -103,6 +103,7 @@ namespace Password.Main
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 MessageBox.Show("不存在数据文件！");
                 return;
             }
@@ -192,6 +193,7 @@ namespace Password.Main
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 MessageBox.Show("不存在数据文件！");
                 return;
             }
@@ -253,7 +255,7 @@ namespace Password.Main
         private void Ediot_Account_btn_Click(object sender, EventArgs e)
         {
 
-            string numID = "";
+           
             int kkk = 0;
             int mmmm = Body_Account_Listview.CheckedItems.Count;
             string[] aaaa = new string[mmmm];
@@ -329,6 +331,7 @@ namespace Password.Main
                 }
                 catch (Exception ex)
                 {
+                    string ExceptionTosting = Convert.ToString(ex);
                     MessageBox.Show("不存在数据文件！");
                     return;
                 }

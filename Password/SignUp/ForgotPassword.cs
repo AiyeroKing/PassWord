@@ -54,6 +54,7 @@ namespace Password.SignUp
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 MessageBox.Show("该用户名无效！");
                 Forgot_username_input.Text = "";
                 Forgot_name_input.Text = "";
@@ -114,6 +115,7 @@ namespace Password.SignUp
             }
             catch (Exception ex)
             {
+                string ExceptionTosting = Convert.ToString(ex);
                 //MessageBox.Show("该用户名无效！");
                 Forgot_username_input.Text = "";
                 Forgot_name_input.Text = "";
