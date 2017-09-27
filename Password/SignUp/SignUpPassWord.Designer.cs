@@ -51,11 +51,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Axure Handwriting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(150, 7);
+            this.label4.Location = new System.Drawing.Point(134, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(306, 28);
+            this.label4.Size = new System.Drawing.Size(359, 28);
             this.label4.TabIndex = 4;
-            this.label4.Text = "AiyeroKing.sln.PassWord";
+            this.label4.Text = "AiyeroKing.sln.SignPassWord";
             // 
             // groupBox1
             // 
@@ -190,7 +190,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Password.Properties.Resources.bird;
-            this.pictureBox1.Location = new System.Drawing.Point(112, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(96, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 37);

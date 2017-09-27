@@ -83,13 +83,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.SEE_TEL_Sex = new System.Windows.Forms.TextBox();
             this.SEE_TEL_Telphone = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.SEE_TEL_Name = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
+            this.label18 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -379,6 +379,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label17);
@@ -401,7 +402,6 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.SEE_TEL_Sex);
             this.groupBox2.Controls.Add(this.SEE_TEL_Telphone);
-            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.SEE_TEL_Name);
             this.groupBox2.Location = new System.Drawing.Point(664, 114);
@@ -599,18 +599,6 @@
             this.SEE_TEL_Telphone.Size = new System.Drawing.Size(134, 21);
             this.SEE_TEL_Telphone.TabIndex = 3;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label9.Font = new System.Drawing.Font("Axure Handwriting", 18F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label9.Location = new System.Drawing.Point(357, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 28);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "只读";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -637,6 +625,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Maroon;
+            this.label18.Font = new System.Drawing.Font("Axure Handwriting", 18F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(354, 9);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 28);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "只读";
             // 
             // MainMenus
             // 
@@ -712,7 +712,6 @@
         private System.Windows.Forms.TextBox SEE_TEL_Phone;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox SEE_TEL_Telphone;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -733,5 +732,6 @@
         private System.Windows.Forms.ColumnHeader lv_Retion;
         private System.Windows.Forms.ColumnHeader lv_Email;
         private System.Windows.Forms.ColumnHeader lv_ID;
+        private System.Windows.Forms.Label label18;
     }
 }

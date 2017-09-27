@@ -291,11 +291,11 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("SketchFlow Print", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Coral;
-            this.label4.Location = new System.Drawing.Point(122, 10);
+            this.label4.Location = new System.Drawing.Point(121, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 32);
+            this.label4.Size = new System.Drawing.Size(238, 32);
             this.label4.TabIndex = 34;
-            this.label4.Text = "ADD.Telphone";
+            this.label4.Text = "Edoit.Telphone";
             // 
             // EdiotTelPhone
             // 
@@ -333,6 +333,7 @@
             this.Name = "EdiotTelPhone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "编辑通讯录";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ApplicationExit);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,7 +38,8 @@ namespace Password
                 return;
             }
             XmlDocument doc = new XmlDocument();
-            string path = Environment.CurrentDirectory + "\\Data\\" + username+".xml";
+            string path = Environment.CurrentDirectory + "\\Data\\" + username + "\\" + username + "Telphone.xml";//定义通讯录路径
+            string ThePathtwo = Environment.CurrentDirectory + "\\Data\\" + username + "\\" + username + "Account.xml";//定义账号密码路径
             try
             {
                 doc.Load(path);
@@ -66,7 +67,7 @@ namespace Password
                 //break;
                 if(name == username && password == passwor)
                 {
-                    SelectChoose s = new SelectChoose(path);
+                    SelectChoose s = new SelectChoose(path, ThePathtwo);
                     //s.pathone = path;
                     Hide();
                     s.Show();

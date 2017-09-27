@@ -75,6 +75,7 @@ namespace Password.SignUp
             XmlDeclaration xmldecl;//定义对象头文件标准
             xmldecl = xml.CreateXmlDeclaration("1.0", "utf-8", "");//将其头文件标准给予确定值
             xml.PreserveWhitespace = false;  //元素内容是否保留空白  
+
             XmlElement root = xml.DocumentElement;//root是数据文档 
             xml.InsertBefore(xmldecl, root);//设置xmldecl 在 root之前
             //以下都是root内容
@@ -96,8 +97,9 @@ namespace Password.SignUp
             Name.InnerText = name1;//username
             Adminiuser.AppendChild(Name);//将user标签节点添加到body标签里面
 
-
-            string ThePath = Environment.CurrentDirectory + "\\Data\\" + username1 + ".xml";//定义路径
+            string Path = Environment.CurrentDirectory + "\\Data\\" + username1;//定义路径
+            string ThePath = Environment.CurrentDirectory + "\\Data\\" + username1 +"\\"+ username1 + "Telphone.xml";//定义路径
+            string ThePathtwo = Environment.CurrentDirectory + "\\Data\\" + username1 + "\\" + username1 + "Account.xml";//定义路径
             if (File.Exists(ThePath))
             {
                 MessageBox.Show("该用户名已存在，无法注册！");
@@ -109,7 +111,12 @@ namespace Password.SignUp
             }
             else
             {
-                xml.Save(ThePath);//保存该xml文件
+                if (!Directory.Exists(Path))
+                {
+                    Directory.CreateDirectory(Path);
+                }
+                xml.Save(ThePath);//保存该第一个xml文件
+                xml.Save(ThePathtwo);//保存该第二个xml文件
                 Sign_username.Text = ""; //用户名-输入框的值
                 Sign_password.Text = ""; //密码-输入框的值
                 Sign_name.Text = "";//真实姓名-输入框的值
