@@ -447,7 +447,22 @@ namespace Password
                 e.Cancel = true;    //取消关闭
             }
         }
+
         #endregion
+
+        //菜单栏选择账号
+        private void Select_Account_Form_btn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            PasswordMunes ps = new PasswordMunes();
+            ps.Show();
+
+        }
+        //菜单栏关闭
+        private void Close_Password_Form_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 

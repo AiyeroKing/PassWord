@@ -403,5 +403,17 @@ namespace Password.Main
 
         #endregion
 
+        //菜单栏转到通讯录
+        private void Select_Tel_Form_btn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            PasswordMunes ps = new PasswordMunes();
+            ps.Show();
+        }
+        //菜单栏关闭
+        private void Close_Account_Program_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

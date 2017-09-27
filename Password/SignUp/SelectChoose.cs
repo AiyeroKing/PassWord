@@ -61,5 +61,7 @@ namespace Password.SignUp
             //MainMenusAccount acc = new MainMenusAccount();
             pathcy.Show();
         }
+
+  
     }
 }

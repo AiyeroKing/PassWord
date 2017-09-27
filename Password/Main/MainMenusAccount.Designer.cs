@@ -104,27 +104,32 @@
             // 
             // 打包文件ToolStripMenuItem
             // 
+            this.打包文件ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("打包文件ToolStripMenuItem.Image")));
             this.打包文件ToolStripMenuItem.Name = "打包文件ToolStripMenuItem";
             this.打包文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.打包文件ToolStripMenuItem.Text = "打包文件";
+            this.打包文件ToolStripMenuItem.Text = "导出数据文件";
             // 
             // 载入文件ToolStripMenuItem
             // 
+            this.载入文件ToolStripMenuItem.Image = global::Password.Properties.Resources.openfile;
             this.载入文件ToolStripMenuItem.Name = "载入文件ToolStripMenuItem";
             this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.载入文件ToolStripMenuItem.Text = "载入文件";
+            this.载入文件ToolStripMenuItem.Text = "载入数据文件";
             // 
             // Close_Account_Program
             // 
+            this.Close_Account_Program.Image = ((System.Drawing.Image)(resources.GetObject("Close_Account_Program.Image")));
             this.Close_Account_Program.Name = "Close_Account_Program";
             this.Close_Account_Program.Size = new System.Drawing.Size(152, 22);
-            this.Close_Account_Program.Text = "关闭";
+            this.Close_Account_Program.Text = "关闭程序";
+            this.Close_Account_Program.Click += new System.EventHandler(this.Close_Account_Program_Click);
             // 
             // Select_Tel_Form_btn
             // 
             this.Select_Tel_Form_btn.Name = "Select_Tel_Form_btn";
             this.Select_Tel_Form_btn.Size = new System.Drawing.Size(56, 21);
             this.Select_Tel_Form_btn.Text = "通讯录";
+            this.Select_Tel_Form_btn.Click += new System.EventHandler(this.Select_Tel_Form_btn_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -137,12 +142,14 @@
             // 
             // 帮助中心ToolStripMenuItem
             // 
+            this.帮助中心ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("帮助中心ToolStripMenuItem.Image")));
             this.帮助中心ToolStripMenuItem.Name = "帮助中心ToolStripMenuItem";
             this.帮助中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.帮助中心ToolStripMenuItem.Text = "帮助中心";
             // 
             // 关于我们ToolStripMenuItem
             // 
+            this.关于我们ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("关于我们ToolStripMenuItem.Image")));
             this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
             this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于我们ToolStripMenuItem.Text = "关于我们";
