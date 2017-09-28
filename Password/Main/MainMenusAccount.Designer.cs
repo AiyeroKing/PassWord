@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenusAccount));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.打包文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.载入文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Close_Account_Program = new System.Windows.Forms.ToolStripMenuItem();
             this.Select_Tel_Form_btn = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,26 +93,10 @@
             // 菜单ToolStripMenuItem
             // 
             this.菜单ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.打包文件ToolStripMenuItem,
-            this.载入文件ToolStripMenuItem,
             this.Close_Account_Program});
             this.菜单ToolStripMenuItem.Name = "菜单ToolStripMenuItem";
             this.菜单ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.菜单ToolStripMenuItem.Text = "菜单";
-            // 
-            // 打包文件ToolStripMenuItem
-            // 
-            this.打包文件ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("打包文件ToolStripMenuItem.Image")));
-            this.打包文件ToolStripMenuItem.Name = "打包文件ToolStripMenuItem";
-            this.打包文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.打包文件ToolStripMenuItem.Text = "导出数据文件";
-            // 
-            // 载入文件ToolStripMenuItem
-            // 
-            this.载入文件ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("载入文件ToolStripMenuItem.Image")));
-            this.载入文件ToolStripMenuItem.Name = "载入文件ToolStripMenuItem";
-            this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.载入文件ToolStripMenuItem.Text = "载入数据文件";
             // 
             // Close_Account_Program
             // 
@@ -144,7 +126,7 @@
             // 
             this.帮助中心ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("帮助中心ToolStripMenuItem.Image")));
             this.帮助中心ToolStripMenuItem.Name = "帮助中心ToolStripMenuItem";
-            this.帮助中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.帮助中心ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.帮助中心ToolStripMenuItem.Text = "帮助中心";
             this.帮助中心ToolStripMenuItem.Click += new System.EventHandler(this.Munes_HelperCenter_Click);
             // 
@@ -152,7 +134,7 @@
             // 
             this.关于我们ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("关于我们ToolStripMenuItem.Image")));
             this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
-            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.关于我们ToolStripMenuItem.Text = "关于我们";
             this.关于我们ToolStripMenuItem.Click += new System.EventHandler(this.Muens_AboutMe_Click);
             // 
@@ -524,8 +506,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 菜单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 打包文件ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 载入文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Close_Account_Program;
         private System.Windows.Forms.ToolStripMenuItem Select_Tel_Form_btn;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;

@@ -25,7 +25,7 @@ namespace Password
             PasswordMunes plogin = new PasswordMunes();//登录界面PasswordMunes
             plogin.Hide();
             string password = MiYao_input.Text;
-            if (password == "supperadmin" || password == "209014" || password == "a")
+            if (password == "supperadmin" || password == "209014")
             {
                 MiYao_input.Text = "";
                 Hide();

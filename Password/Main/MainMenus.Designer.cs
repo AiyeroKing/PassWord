@@ -34,8 +34,6 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.载入文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Close_Password_Form = new System.Windows.Forms.ToolStripMenuItem();
             this.Select_Account_Form_btn = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -135,32 +133,16 @@
             // 菜单ToolStripMenuItem
             // 
             this.菜单ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem,
-            this.载入文件ToolStripMenuItem,
             this.Close_Password_Form});
             this.菜单ToolStripMenuItem.Name = "菜单ToolStripMenuItem";
             this.菜单ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.菜单ToolStripMenuItem.Text = "菜单";
             // 
-            // ToolStripMenuItem
-            // 
-            this.ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem.Image")));
-            this.ToolStripMenuItem.Name = "ToolStripMenuItem";
-            this.ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.ToolStripMenuItem.Text = "导出数据文件";
-            // 
-            // 载入文件ToolStripMenuItem
-            // 
-            this.载入文件ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("载入文件ToolStripMenuItem.Image")));
-            this.载入文件ToolStripMenuItem.Name = "载入文件ToolStripMenuItem";
-            this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.载入文件ToolStripMenuItem.Text = "载入数据文件";
-            // 
             // Close_Password_Form
             // 
             this.Close_Password_Form.Image = ((System.Drawing.Image)(resources.GetObject("Close_Password_Form.Image")));
             this.Close_Password_Form.Name = "Close_Password_Form";
-            this.Close_Password_Form.Size = new System.Drawing.Size(148, 22);
+            this.Close_Password_Form.Size = new System.Drawing.Size(152, 22);
             this.Close_Password_Form.Text = "关闭";
             this.Close_Password_Form.Click += new System.EventHandler(this.Close_Password_Form_Click);
             // 
@@ -184,7 +166,7 @@
             // 
             this.Munes_HelperCenter.Image = ((System.Drawing.Image)(resources.GetObject("Munes_HelperCenter.Image")));
             this.Munes_HelperCenter.Name = "Munes_HelperCenter";
-            this.Munes_HelperCenter.Size = new System.Drawing.Size(152, 22);
+            this.Munes_HelperCenter.Size = new System.Drawing.Size(124, 22);
             this.Munes_HelperCenter.Text = "帮助中心";
             this.Munes_HelperCenter.Click += new System.EventHandler(this.Munes_HelperCenter_Click);
             // 
@@ -192,7 +174,7 @@
             // 
             this.Muens_AboutMe.Image = ((System.Drawing.Image)(resources.GetObject("Muens_AboutMe.Image")));
             this.Muens_AboutMe.Name = "Muens_AboutMe";
-            this.Muens_AboutMe.Size = new System.Drawing.Size(152, 22);
+            this.Muens_AboutMe.Size = new System.Drawing.Size(124, 22);
             this.Muens_AboutMe.Text = "关于我";
             this.Muens_AboutMe.Click += new System.EventHandler(this.Muens_AboutMe_Click);
             // 
@@ -686,8 +668,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 菜单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 载入文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Munes_HelperCenter;
         private System.Windows.Forms.ToolStripMenuItem Muens_AboutMe;
