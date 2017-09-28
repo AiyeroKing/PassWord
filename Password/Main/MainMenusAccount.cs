@@ -1,4 +1,5 @@
-﻿using Password.Main.PassWordForm;
+﻿using Password.Main.HelpMe;
+using Password.Main.PassWordForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -414,6 +415,19 @@ namespace Password.Main
         private void Close_Account_Program_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+
+        private void Munes_HelperCenter_Click(object sender, EventArgs e)
+        {
+            HelpCenterForm help = new HelpCenterForm();
+            help.Show();
+        }
+        //菜单栏选项--关于我
+        private void Muens_AboutMe_Click(object sender, EventArgs e)
+        {
+            AboutMeForm Am = new AboutMeForm();
+            Am.Show();
         }
     }
 }

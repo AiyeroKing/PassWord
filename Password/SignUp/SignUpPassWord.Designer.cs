@@ -189,7 +189,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Password.Properties.Resources.bird;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(96, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";

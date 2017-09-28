@@ -111,7 +111,7 @@
             // 
             // 载入文件ToolStripMenuItem
             // 
-            this.载入文件ToolStripMenuItem.Image = global::Password.Properties.Resources.openfile;
+            this.载入文件ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("载入文件ToolStripMenuItem.Image")));
             this.载入文件ToolStripMenuItem.Name = "载入文件ToolStripMenuItem";
             this.载入文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.载入文件ToolStripMenuItem.Text = "载入数据文件";
@@ -146,6 +146,7 @@
             this.帮助中心ToolStripMenuItem.Name = "帮助中心ToolStripMenuItem";
             this.帮助中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.帮助中心ToolStripMenuItem.Text = "帮助中心";
+            this.帮助中心ToolStripMenuItem.Click += new System.EventHandler(this.Munes_HelperCenter_Click);
             // 
             // 关于我们ToolStripMenuItem
             // 
@@ -153,6 +154,7 @@
             this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
             this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于我们ToolStripMenuItem.Text = "关于我们";
+            this.关于我们ToolStripMenuItem.Click += new System.EventHandler(this.Muens_AboutMe_Click);
             // 
             // pictureBox1
             // 

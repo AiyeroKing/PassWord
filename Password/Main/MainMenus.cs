@@ -1,4 +1,5 @@
-﻿using Password.Main.TelphoneForm;
+﻿using Password.Main.HelpMe;
+using Password.Main.TelphoneForm;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -462,6 +463,18 @@ namespace Password
         private void Close_Password_Form_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        //菜单栏选项--帮助中心
+        private void Munes_HelperCenter_Click(object sender, EventArgs e)
+        {
+            HelpCenterForm help = new HelpCenterForm();
+            help.Show();
+        }
+        //菜单栏选项--关于我
+        private void Muens_AboutMe_Click(object sender, EventArgs e)
+        {
+            AboutMeForm Am = new AboutMeForm();
+            Am.Show();
         }
     }
 }

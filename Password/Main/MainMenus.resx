@@ -657,7 +657,7 @@
         1kn5IIu5+eD+KCI2NjY2NjY2NjbZbWrqPwmYk8jC4cFDAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="帮助中心ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Munes_HelperCenter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAA39klEQVR4Xu3d53Jc55Xucde5AtW5Al3A
@@ -902,7 +902,7 @@
         guXuG9D/Tf8bPcrXP8ORPsnJ1772/wHHDD7lEdAdAAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="关于我们ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Muens_AboutMe.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAAK/INwWK6QAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAD/m0lEQVR4Xux9B3hW5fn+cdS2dg9r1dZR
