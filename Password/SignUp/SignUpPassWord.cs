@@ -111,6 +111,11 @@ namespace Password.SignUp
             }
             else
             {
+                string Path1 = Environment.CurrentDirectory + "\\Data";
+                if (!Directory.Exists(Path1))
+                {
+                    Directory.CreateDirectory(Path1);
+                }
                 if (!Directory.Exists(Path))
                 {
                     Directory.CreateDirectory(Path);
