@@ -102,7 +102,7 @@
             // 
             this.Close_Account_Program.Image = ((System.Drawing.Image)(resources.GetObject("Close_Account_Program.Image")));
             this.Close_Account_Program.Name = "Close_Account_Program";
-            this.Close_Account_Program.Size = new System.Drawing.Size(152, 22);
+            this.Close_Account_Program.Size = new System.Drawing.Size(124, 22);
             this.Close_Account_Program.Text = "关闭程序";
             this.Close_Account_Program.Click += new System.EventHandler(this.Close_Account_Program_Click);
             // 
@@ -208,7 +208,6 @@
             // 
             this.SEE_Account_PassWord.Location = new System.Drawing.Point(101, 183);
             this.SEE_Account_PassWord.Name = "SEE_Account_PassWord";
-            this.SEE_Account_PassWord.PasswordChar = '*';
             this.SEE_Account_PassWord.ReadOnly = true;
             this.SEE_Account_PassWord.Size = new System.Drawing.Size(150, 21);
             this.SEE_Account_PassWord.TabIndex = 3;

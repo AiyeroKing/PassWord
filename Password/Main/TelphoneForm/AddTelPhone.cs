@@ -39,18 +39,18 @@ namespace Password.Main.TelphoneForm
         //初始化控件输入框内部的值
         public void InitializeComponentTwo()
         {
-            ADD_TEL_Name.Text = "  ";
+            ADD_TEL_Name.Text = "";
             ADD_TEL_Sex.Text = "未填";
-            ADD_TEL_Telphone.Text = "  ";
-            ADD_TEL_Phone.Text = "  ";
+            ADD_TEL_Telphone.Text = "";
+            ADD_TEL_Phone.Text = "";
             ADD_TEL_Birthday.Text = "2010/10/10";
-            ADD_TEL_Idcard.Text = "  ";
+            ADD_TEL_Idcard.Text = "";
             ADD_TEL_Retion.Text = "普通朋友";
-            ADD_TEL_QQ.Text = "  ";
-            ADD_TEL_Email.Text = "  ";
-            ADD_TEL_Company.Text = "  ";
-            ADD_TEL_Address.Text = "  ";
-            ADD_TEL_Remark.Text = "  ";
+            ADD_TEL_QQ.Text = "";
+            ADD_TEL_Email.Text = "";
+            ADD_TEL_Company.Text = "";
+            ADD_TEL_Address.Text = "";
+            ADD_TEL_Remark.Text = "";
         }
 
         //取消添加按钮

@@ -33,11 +33,11 @@ namespace Password.Main.PassWordForm
         //初始化控件输入框内部的值
         public void InitializeComponentTwo()
         {
-            ADD_Account_Name.Text = " ";
+            ADD_Account_Name.Text = "";
             ADD_Account_Remark.Text = "未填";
-            ADD_TEL_UserName.Text = " ";
-            ADD_TEL_PassWord.Text = " ";
-            ADD_Account_Remark.Text = " ";
+            ADD_TEL_UserName.Text = "";
+            ADD_TEL_PassWord.Text = "";
+            ADD_Account_Remark.Text = "";
         }
 
         private void Cell_btn_ADD_Password_Click(object sender, EventArgs e)

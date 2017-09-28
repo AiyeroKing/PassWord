@@ -131,7 +131,6 @@ namespace Password.SignUp
                 PasswordMunes pa = new PasswordMunes();
                 pa.Show();
             }
-
         }
         //
         //绑定控件触发事件
