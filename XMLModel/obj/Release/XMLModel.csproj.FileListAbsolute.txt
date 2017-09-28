@@ -3,3 +3,4 @@ C:\Users\Aiyero\Desktop\Password\XMLModel\bin\Release\XMLModel.pdb
 C:\Users\Aiyero\Desktop\Password\XMLModel\obj\Release\XMLModel.csproj.CoreCompileInputs.cache
 C:\Users\Aiyero\Desktop\Password\XMLModel\obj\Release\XMLModel.dll
 C:\Users\Aiyero\Desktop\Password\XMLModel\obj\Release\XMLModel.pdb
+C:\Users\Aiyero\Desktop\Password\XMLModel\obj\Release\XMLModel.csprojResolveAssemblyReference.cache
